@@ -1,0 +1,76 @@
+proxies:
+  - name: whyvpn-msecure
+    server: corona.jakarta.go.id
+    port: 443
+    type: vless
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: corona.jakarta.go.id
+    network: ws
+    ws-opts:
+      path: wss://corona.jakarta.go.id/vless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: whyvpn-msecure 2
+    server: corona.jakarta.go.id
+    port: 443
+    type: vless
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: corona.jakarta.go.id
+    network: ws
+    ws-opts:
+      path: wss://corona.jakarta.go.id/vless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: whyvpn-msecure 3
+    server: corona.jakarta.go.id
+    port: 443
+    type: vless
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: corona.jakarta.go.id
+    network: ws
+    ws-opts:
+      path: wss://corona.jakarta.go.id/vless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: whyvpn-msecure 4
+    server: corona.jakarta.go.id
+    port: 443
+    type: vless
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: corona.jakarta.go.id
+    network: ws
+    ws-opts:
+      path: wss://corona.jakarta.go.id/vless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: whyvpn-msecure 5
+    server: corona.jakarta.go.id
+    port: 443
+    type: vless
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: corona.jakarta.go.id
+    network: ws
+    ws-opts:
+      path: wss://corona.jakarta.go.id/vless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
