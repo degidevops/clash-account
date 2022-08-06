@@ -1,0 +1,31 @@
+proxies:
+
+  - name: whyvpn-msecure
+
+    server: 104.21.21.147
+
+    port: 443
+
+    type: vless
+
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+
+    cipher: auto
+
+    tls: true
+
+    skip-cert-verify: true
+
+    servername: do1.kitu.xyz
+
+    network: ws
+
+    ws-opts:
+
+      path: /vless/
+
+      headers:
+
+        Host: do1.kitu.xyz
+
+    udp: true
