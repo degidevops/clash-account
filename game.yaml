@@ -1,2 +1,2 @@
 vless://c6e33e22-3af6-4c60-8d18-50076034b5a1@104.21.21.147:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=xray-vless-grpc&sni=dewabiz.kitu.xyz#sgdo+grpc
-vmess://eyJhZGQiOiIxMDQuMjEuMjEuMTQ3IiwiYWlkIjoiMCIsImhvc3QiOiJ2MnJheTMudWRwZ3cuY29tIiwiaWQiOiI2OWY4N2M0OC1mNmY2LTQ0NzgtOGE5My04MWJkZWQ2MDE0N2QiLCJuZXQiOiJ3cyIsInBhdGgiOiIvaG93ZHkiLCJwb3J0IjoiNDQzIiwicHMiOiJ2MnJheTMudWRwZ3cuY29tIiwic2N5IjoiYXV0byIsInNuaSI6InYycmF5My51ZHBndy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+trojan://a0fef37b-9905-4663-96cc-fbe904d7c14d@104.21.21.147:443?mode=gun&security=tls&type=grpc&serviceName=xray-trojan-grpc&sni=dewabiz.kitu.xyz#gametj+biznet
