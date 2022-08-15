@@ -45,3 +45,18 @@ proxies:
       headers:
         Host: v2ray3.udpgw.com
     udp: true
+  - name: do2
+    server: 104.21.21.147
+    port: 443
+    type: vless
+    uuid: 6bf34712-79f3-4ba2-9598-19099e035991
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do2.kitu.xyz
+    network: ws
+    ws-opts:
+      path: /vless/
+      headers:
+        Host: do2.kitu.xyz
+    udp: true
