@@ -1,3 +1,47 @@
-vless://2619c40b-2ef3-4d5f-8274-84820054e3aa@104.21.21.147:443?path=%2Fvless%2F&security=tls&encryption=none&host=do1.kitu.xyz&type=ws&sni=do1.kitu.xyz#whyvpn-msecuresg
-vless://13006e62-07c3-45ab-94b8-e521491808d6@104.21.21.147:443?path=%2Fxvless%2F&security=tls&encryption=none&host=do1.kitu.xyz&type=ws&sni=do1.kitu.xyz#sg-do1+xlesssss
-vmess://eyJhZGQiOiIxMDQuMjEuMjEuMTQ3IiwiYWlkIjoiMCIsImhvc3QiOiJ2MnJheTMudWRwZ3cuY29tIiwiaWQiOiI2OWY4N2M0OC1mNmY2LTQ0NzgtOGE5My04MWJkZWQ2MDE0N2QiLCJuZXQiOiJ3cyIsInBhdGgiOiIvaG93ZHkiLCJwb3J0IjoiNDQzIiwicHMiOiJ2MnJheTMudWRwZ3cuY29tIiwic2N5IjoiYXV0byIsInNuaSI6InYycmF5My51ZHBndy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+proxies:
+  - name: whyvpn-msecure
+    server: 104.21.21.147
+    port: 443
+    type: vless
+    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do1.kitu.xyz
+    network: ws
+    ws-opts:
+      path: /vless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: sg-do1 xless
+    server: 104.21.21.147
+    port: 443
+    type: vless
+    uuid: 13006e62-07c3-45ab-94b8-e521491808d6
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do1.kitu.xyz
+    network: ws
+    ws-opts:
+      path: /xvless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: v2ray3.udpgw.com
+    server: 104.21.21.147
+    port: 443
+    type: vmess
+    uuid: 69f87c48-f6f6-4478-8a93-81bded60147d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: v2ray3.udpgw.com
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: v2ray3.udpgw.com
+    udp: true
