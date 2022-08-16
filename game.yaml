@@ -1,2 +1,1 @@
-vless://c6e33e22-3af6-4c60-8d18-50076034b5a1@104.21.21.147:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=xray-vless-grpc&sni=dewabiz.kitu.xyz#sgdo+grpc
-trojan://a0fef37b-9905-4663-96cc-fbe904d7c14d@104.21.21.147:443?mode=gun&security=tls&type=grpc&serviceName=xray-trojan-grpc&sni=dewabiz.kitu.xyz#gametj+biznet
+trojan://53905d5f-6453-4a7a-9c36-0af2c4dc83f7@104.21.21.147:443?mode=gun&security=tls&type=grpc&serviceName=xray-trojan-grpc&sni=do2.kitu.xyz#do2+why+grpc+ojan
