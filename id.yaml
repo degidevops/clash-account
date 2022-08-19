@@ -45,7 +45,7 @@ proxies:
       headers:
         Host: do2.kitu.xyz
     udp: true
-     - name: do3
+  - name: do3
     server: 104.21.21.147
     port: 443
     type: vless
