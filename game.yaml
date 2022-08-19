@@ -1,1 +1,1 @@
-trojan://53905d5f-6453-4a7a-9c36-0af2c4dc83f7@104.21.21.147:443?mode=gun&security=tls&type=grpc&serviceName=xray-trojan-grpc&sni=do2.kitu.xyz#do2+why+grpc+ojan
+vless://7be7012b-8ab9-46fc-aa5f-597a9d509713@104.21.21.147:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=xray-vless-grpc&sni=do1.kitu.xyz#whyvpn-msecure1
