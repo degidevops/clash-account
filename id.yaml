@@ -1,19 +1,4 @@
 proxies:
-  - name: whyvpn-msecure
-    server: 104.21.21.147
-    port: 443
-    type: vless
-    uuid: 2619c40b-2ef3-4d5f-8274-84820054e3aa
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do1.kitu.xyz
-    network: ws
-    ws-opts:
-      path: /vless/
-      headers:
-        Host: do1.kitu.xyz
-    udp: true
   - name: sg-do1 xless
     server: 104.21.21.147
     port: 443
@@ -29,21 +14,21 @@ proxies:
       headers:
         Host: do1.kitu.xyz
     udp: true
-  - name: v2ray3.udpgw.com
+  - name: v2ray1.udpgw.com
     server: 104.21.21.147
     port: 443
     type: vmess
-    uuid: 69f87c48-f6f6-4478-8a93-81bded60147d
+    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: v2ray3.udpgw.com
+    servername: v2ray1.udpgw.com
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: v2ray3.udpgw.com
+        Host: v2ray1.udpgw.com
     udp: true
   - name: do2
     server: 104.21.21.147
