@@ -1,31 +1,31 @@
 ---
 proxy-providers:
-  ACCOUNT-ID:
+  VMESS-ID:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/id.yaml
-    path: "./id.yaml"
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-id.yaml
+    path: "./proxy/vmess-id.yaml"
     interval: 86400
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 30
-  ACCOUNT-SG:
+  VMESS-SG:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/sg.yaml
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-sg.yaml
     interval: 86400
-    path: "./sg.yaml"
+    path: "./proxy/vmess-sg.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 30
-  ACCOUNT-GAME:
+  VMESS-GAME:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/game.yaml
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-game.yaml
     interval: 86400
-    path: "./game.yaml"
+    path: "./proxy/vmess-game.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
@@ -375,6 +375,6 @@ rule-providers:
   rule_umum:
     type: http
     behavior: classical
-    path: "./rule_umum.yaml"
+    path: "./rule/rule_umum.yaml"
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_umum.yaml
     interval: 86400
