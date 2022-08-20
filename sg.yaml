@@ -1,19 +1,4 @@
 proxies:
-  - name: sg-do1 xless
-    server: 104.21.21.147
-    port: 443
-    type: vless
-    uuid: 13006e62-07c3-45ab-94b8-e521491808d6
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do1.kitu.xyz
-    network: ws
-    ws-opts:
-      path: /xvless/
-      headers:
-        Host: do1.kitu.xyz
-    udp: true
   - name: do2
     server: 104.21.21.147
     port: 443
