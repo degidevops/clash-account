@@ -1,5 +1,4 @@
 proxies:
-#vless
   - name: sg-do1 xless
     server: 104.21.21.147
     port: 443
@@ -45,7 +44,6 @@ proxies:
       headers:
         Host: do3.kitu.xyz
     udp: true
-#vmess
  - name: v2ray1.udpgw.com
     server: 104.21.21.147
     port: 443
