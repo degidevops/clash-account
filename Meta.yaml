@@ -60,25 +60,61 @@ proxy-providers:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 30
+  TROJAN-ID:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-id.yaml
+    path: "./proxy/trojan-id.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 30
+  TROJAN-SG:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-sg.yaml
+    interval: 86400
+    path: "./proxy/trojan-sg.yaml"
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 30
+  TROJAN-GAME:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-game.yaml
+    interval: 86400
+    path: "./proxy/trojan-game.yaml"
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 30
 proxy-groups:
   - name: Route ID
     type: load-balance
     strategy: round-robin
     use:
-      - ACCOUNT-ID
+      - VMESS-ID
+      - VLESS-ID
+      - TROJAN-ID
     url: http://cp.cloudflare.com/generate_204
     interval: 480
   - name: Route SG
     type: load-balance
     strategy: round-robin
     use:
-      - ACCOUNT-SG
+      - VMESS-SG
+      - VLESS-SG
+      - TROJAN-SG
     url: http://cp.cloudflare.com/generate_204
     interval: 480
   - name: Route GAME
     type: url-test
     use:
-      - ACCOUNT-GAME
+      - VMESS-GAME
+      - VLESS-GAME
+      - TROJAN-GAME
     url: http://cp.cloudflare.com/generate_204
     interval: 600
   - name: TrafficDirect
@@ -98,7 +134,9 @@ proxy-groups:
       - Route GAME
       - TrafficDirect
     use:
-      - ACCOUNT-GAME
+      - VMESS-GAME
+      - VLESS-GAME
+      - TROJAN-GAME
   - name: TrafficAds
     type: select
     proxies:
