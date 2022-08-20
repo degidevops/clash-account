@@ -30,90 +30,120 @@ proxy-providers:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 30
+  VLESS-ID:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-id.yaml
+    path: "./proxy/vless-id.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 30
+  VLESS-SG:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-sg.yaml
+    interval: 86400
+    path: "./proxy/vless-sg.yaml"
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 30
+  VLESS-GAME:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-game.yaml
+    interval: 86400
+    path: "./proxy/vless-game.yaml"
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 30
 proxy-groups:
-- name: Route ID
-  type: load-balance
-  strategy: round-robin
-  use:
-  - ACCOUNT-ID
-  url: http://cp.cloudflare.com/generate_204
-  interval: 480
-- name: Route SG
-  type: load-balance
-  strategy: round-robin
-  use:
-  - ACCOUNT-SG
-  url: http://cp.cloudflare.com/generate_204
-  interval: 480
-- name: Route GAME
-  type: url-test
-  use:
-  - ACCOUNT-GAME
-  url: http://cp.cloudflare.com/generate_204
-  interval: 600
-- name: TrafficDirect
-  type: select
-  proxies:
-  - DIRECT
-  - Route ID
-  - Route SG
-- name: TrafficPortGames
-  type: select
-  proxies:
-  - TrafficDirect
-  - Route GAME
-- name: TrafficGaming
-  type: select
-  proxies:
-  - Route GAME
-  - TrafficDirect
-  use:
-  - ACCOUNT-GAME
-- name: TrafficAds
-  type: select
-  proxies:
-  - REJECT
-  - Route SG
-  - Route ID
-- name: TrafficPorn
-  type: select
-  proxies:
-  - REJECT
-  - Route SG
-  - Route ID
-- name: TrafficUmum
-  type: fallback
-  lazy: true
-  proxies:
-  - Route SG
-  - Route ID
-  url: http://cp.cloudflare.com/generate_204
-  interval: 30
-- name: TrafficIndo
-  type: fallback
-  lazy: true
-  proxies:
-  - Route ID
-  - Route SG
-  - TrafficDirect
-  url: http://cp.cloudflare.com/generate_204
-  interval: 30
-- name: TrafficStreaming
-  type: fallback
-  lazy: true
-  proxies:
-  - Route SG
-  - Route ID
-  url: http://cp.cloudflare.com/generate_204
-  interval: 30
-- name: TrafficSosmed
-  type: fallback
-  lazy: true
-  proxies:
-  - Route ID
-  - Route SG
-  url: http://cp.cloudflare.com/generate_204
-  interval: 30
+  - name: Route ID
+    type: load-balance
+    strategy: round-robin
+    use:
+      - ACCOUNT-ID
+    url: http://cp.cloudflare.com/generate_204
+    interval: 480
+  - name: Route SG
+    type: load-balance
+    strategy: round-robin
+    use:
+      - ACCOUNT-SG
+    url: http://cp.cloudflare.com/generate_204
+    interval: 480
+  - name: Route GAME
+    type: url-test
+    use:
+      - ACCOUNT-GAME
+    url: http://cp.cloudflare.com/generate_204
+    interval: 600
+  - name: TrafficDirect
+    type: select
+    proxies:
+      - DIRECT
+      - Route ID
+      - Route SG
+  - name: TrafficPortGames
+    type: select
+    proxies:
+      - TrafficDirect
+      - Route GAME
+  - name: TrafficGaming
+    type: select
+    proxies:
+      - Route GAME
+      - TrafficDirect
+    use:
+      - ACCOUNT-GAME
+  - name: TrafficAds
+    type: select
+    proxies:
+      - REJECT
+      - Route SG
+      - Route ID
+  - name: TrafficPorn
+    type: select
+    proxies:
+      - REJECT
+      - Route SG
+      - Route ID
+  - name: TrafficUmum
+    type: fallback
+    lazy: true
+    proxies:
+      - Route SG
+      - Route ID
+    url: http://cp.cloudflare.com/generate_204
+    interval: 30
+  - name: TrafficIndo
+    type: fallback
+    lazy: true
+    proxies:
+      - Route ID
+      - Route SG
+      - TrafficDirect
+    url: http://cp.cloudflare.com/generate_204
+    interval: 30
+  - name: TrafficStreaming
+    type: fallback
+    lazy: true
+    proxies:
+      - Route SG
+      - Route ID
+    url: http://cp.cloudflare.com/generate_204
+    interval: 30
+  - name: TrafficSosmed
+    type: fallback
+    lazy: true
+    proxies:
+      - Route ID
+      - Route SG
+    url: http://cp.cloudflare.com/generate_204
+    interval: 30
 port: 7890
 socks-port: 7891
 mixed-port: 7893
@@ -125,250 +155,250 @@ tcp-concurrent: true
 unified-delay: true
 use-process: true
 allow-lan: true
-bind-address: '*'
+bind-address: "*"
 mode: rule
 log-level: silent
 ipv6: false
 external-controller: 0.0.0.0:9090
 external-ui: "/usr/share/openclash/ui"
-secret: ''
+secret: ""
 profile:
   store-selected: true
   store-fake-ip: true
 sniffer:
   enable: true
   sniffing:
-  - tls
-  - http
+    - tls
+    - http
   force-domain:
-  - "+.netflix.com"
-  - "+.nflxvideo.net"
-  - "+.amazonaws.com"
-  - "+.media.dssott.com"
+    - "+.netflix.com"
+    - "+.nflxvideo.net"
+    - "+.amazonaws.com"
+    - "+.media.dssott.com"
   skip-domain:
-  - "+.apple.com"
-  - Mijia Cloud
-  - "+.jd.com"
+    - "+.apple.com"
+    - Mijia Cloud
+    - "+.jd.com"
   port-whitelist:
-  - 443
-  - 80
+    - 443
+    - 80
 dns:
   enable: true
   listen: 0.0.0.0:7874
   use-hosts: true
   default-nameserver:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 9.9.9.9
-  - 149.112.112.112
-  - 208.67.222.222
-  - 208.67.220.220
-  - 185.228.168.9
-  - 185.228.169.168
-  - 76.76.2.0
-  - 76.76.10.0
-  - 94.140.14.140
-  - 94.140.14.141
-  - 172.105.216.54
+    - 1.1.1.1
+    - 1.0.0.1
+    - 9.9.9.9
+    - 149.112.112.112
+    - 208.67.222.222
+    - 208.67.220.220
+    - 185.228.168.9
+    - 185.228.169.168
+    - 76.76.2.0
+    - 76.76.10.0
+    - 94.140.14.140
+    - 94.140.14.141
+    - 172.105.216.54
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:
-  - https://dns.cloudflare.com/dns-query
-  - tls://1.1.1.1:853
-  - 1.0.0.1
+    - https://dns.cloudflare.com/dns-query
+    - tls://1.1.1.1:853
+    - 1.0.0.1
   fallback:
-  - https://dns.cloudflare.com/dns-query
-  - tls://1.1.1.1:853
-  - 1.0.0.1
+    - https://dns.cloudflare.com/dns-query
+    - tls://1.1.1.1:853
+    - 1.0.0.1
   fallback-filter:
     geoip: true
     geoip-code: ID
     geosite:
-    - rule-indo
+      - rule-indo
     #- gfw
     #- greatfire
     ipcidr:
-    - 240.0.0.0/4
+      - 240.0.0.0/4
     domain:
-    - "+.google.com"
-    - "+.facebook.com"
-    - "+.youtube.com"
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
   ipv6: false
   fake-ip-filter:
-  - "*.lan"
-  - "*.localdomain"
-  - "*.example"
-  - "*.invalid"
-  - "*.localhost"
-  - "*.test"
-  - "*.local"
-  - "*.home.arpa"
-  - time.*.com
-  - time.*.gov
-  - time.*.edu.cn
-  - time.*.apple.com
-  - time-ios.apple.com
-  - time1.*.com
-  - time2.*.com
-  - time3.*.com
-  - time4.*.com
-  - time5.*.com
-  - time6.*.com
-  - time7.*.com
-  - ntp.*.com
-  - ntp1.*.com
-  - ntp2.*.com
-  - ntp3.*.com
-  - ntp4.*.com
-  - ntp5.*.com
-  - ntp6.*.com
-  - ntp7.*.com
-  - "*.time.edu.cn"
-  - "*.ntp.org.cn"
-  - "+.pool.ntp.org"
-  - time1.cloud.tencent.com
-  - music.163.com
-  - "*.music.163.com"
-  - "*.126.net"
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - "*.kuwo.cn"
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - joox.com
-  - y.qq.com
-  - "*.y.qq.com"
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - "*.xiami.com"
-  - "*.music.migu.cn"
-  - music.migu.cn
-  - "+.msftconnecttest.com"
-  - "+.msftncsi.com"
-  - msftconnecttest.com
-  - msftncsi.com
-  - localhost.ptlogin2.qq.com
-  - localhost.sec.qq.com
-  - "+.srv.nintendo.net"
-  - "*.n.n.srv.nintendo.net"
-  - "+.stun.playstation.net"
-  - xbox.*.*.microsoft.com
-  - "*.*.xboxlive.com"
-  - xbox.*.microsoft.com
-  - xnotify.xboxlive.com
-  - "+.battlenet.com.cn"
-  - "+.wotgame.cn"
-  - "+.wggames.cn"
-  - "+.wowsgame.cn"
-  - "+.wargaming.net"
-  - proxy.golang.org
-  - stun.*.*
-  - stun.*.*.*
-  - "+.stun.*.*"
-  - "+.stun.*.*.*"
-  - "+.stun.*.*.*.*"
-  - "+.stun.*.*.*.*.*"
-  - heartbeat.belkin.com
-  - "*.linksys.com"
-  - "*.linksyssmartwifi.com"
-  - "*.router.asus.com"
-  - mesu.apple.com
-  - swscan.apple.com
-  - swquery.apple.com
-  - swdownload.apple.com
-  - swcdn.apple.com
-  - swdist.apple.com
-  - lens.l.google.com
-  - stun.l.google.com
-  - "+.nflxvideo.net"
-  - "*.square-enix.com"
-  - "*.finalfantasyxiv.com"
-  - "*.ffxiv.com"
-  - "*.ff14.sdo.com"
-  - ff.dorado.sdo.com
-  - "*.mcdn.bilivideo.cn"
-  - "+.media.dssott.com"
-  - shark007.net
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time-ios.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - "+.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - msftconnecttest.com
+    - msftncsi.com
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - "+.srv.nintendo.net"
+    - "*.n.n.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - xbox.*.microsoft.com
+    - xnotify.xboxlive.com
+    - "+.battlenet.com.cn"
+    - "+.wotgame.cn"
+    - "+.wggames.cn"
+    - "+.wowsgame.cn"
+    - "+.wargaming.net"
+    - proxy.golang.org
+    - stun.*.*
+    - stun.*.*.*
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - heartbeat.belkin.com
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - mesu.apple.com
+    - swscan.apple.com
+    - swquery.apple.com
+    - swdownload.apple.com
+    - swcdn.apple.com
+    - swdist.apple.com
+    - lens.l.google.com
+    - stun.l.google.com
+    - "+.nflxvideo.net"
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - ff.dorado.sdo.com
+    - "*.mcdn.bilivideo.cn"
+    - "+.media.dssott.com"
+    - shark007.net
 rules:
-- DST-PORT,22,TrafficDirect
-- GEOIP,private,DIRECT,no-resolve
-- GEOSITE,rule-malicious,REJECT
-- GEOSITE,oisd-full,TrafficAds
-- GEOSITE,rule-ads,TrafficAds
-- GEOSITE,oisd-nsfw,TrafficPorn
-- GEOSITE,category-porn,TrafficPorn
-- GEOSITE,rule-umum,TrafficUmum
-#Zerotier
-- OR,((GEOSITE,rule-umum),(DST-PORT,9993/29994/40775/43215)),TrafficUmum
-- GEOSITE,rule-indo,TrafficIndo
-- GEOIP,netflix,TrafficIndo
-- GEOSITE,rule-streaming,TrafficStreaming
-- GEOSITE,rule-sosmed,TrafficSosmed
-- GEOIP,facebook,TrafficSosmed
-- GEOIP,twitter,TrafficSosmed
-- GEOIP,telegram,TrafficSosmed
-- GEOSITE,videoconference,TrafficStreaming
-#VideoConference
-- DST-PORT,3478-3497/8801-8810/16384-16387/1853/8200/5004/9000/5090-5091/5349/10000/19302-19309/5938/5060-5061/500/4500,TrafficStreaming
-#MLBB
-- DST-PORT,5000-5221/5224-5227/5229-5241/5243-5287/5289-5352/5354-5509/5517/5520-5529/5551-5559/5601-5700/8443/9000-9010/9443/10003/30000-30300,TrafficPortGames,tcp
-- DST-PORT,5517-5529/5551-5559/5601-5700/8001/8130/8443/9000-9010/9120/9992/10003/30000-30300,TrafficPortGames,udp
-#FF
-- DST-PORT,6006/6008/6674/7006-7008/7889/8001-8012/9006/9137/10000-10012/11000-11019/12006/12008/13006/15006/20561/39003/39006/39698/39779/39800,TrafficPortGames,tcp
-- DST-PORT,6006/6008/6674/7006-7008/7889/8008/8001-8012/8130/8443/9008/9120/10000-10015/10100/11000-11019/12008/13008,TrafficPortGames,udp
-#PUBG
-- DST-PORT,7889/10012/13004/14000/17000/17500/18081/20000-20002/20371,TrafficPortGames,tcp
-- DST-PORT,8011/9030/10491/10612/12235/13004/13748/17000/17500/20000-20002/7086-7995/10039/10096/11455/12070-12460/13894/13972/41182-41192,TrafficPortGames,udp
-#CODM
-- DST-PORT,3013/10000-10019/18082/50000/65010/65050,TrafficPortGames,tcp
-- DST-PORT,7085-7995/8700/9030/10010-10019/17000-20100,TrafficPortGames,udp
-#AOV
-- DST-PORT,10001-10094,TrafficPortGames,tcp
-- DST-PORT,10101-10201/10080-10110/17000-18000,TrafficPortGames,udp
-#Stumble Guys
-- DST-PORT,5055-5058,TrafficPortGames,udp
-#Genshin Impact
-- DST-PORT,42472,TrafficPortGames,tcp
-- DST-PORT,42472/22101-22102,TrafficPortGames,udp
-#Clash of Clans (COC) & Clash Royale
-- DST-PORT,9330-9340,TrafficPortGames,tcp
-- DST-PORT,9330-9340,TrafficPortGames,udp
-#League of Legends (LOL) Mobile
-- DST-PORT,2080-2099,TrafficPortGames,tcp
-- DST-PORT,5100,TrafficPortGames,udp
-#DOTA2
-- DST-PORT,9100-9200/8230-8250/8110-8120/27000-28998,TrafficPortGames,tcp
-- DST-PORT,27000-28998/39000,TrafficPortGames,udp
-#FIFA ONLINE
-- DST-PORT,7770-7790,TrafficPortGames,tcp
-- DST-PORT,16300-16350,TrafficPortGames,udp
-#Point Blank Mobile (PB-Mobile)
-- DST-PORT,44590-44610,TrafficPortGames,tcp
-- DST-PORT,40000-40010,TrafficPortGames,udp
-#LINE Let’s Get Rich
-- DST-PORT,10500-10515,TrafficPortGames,tcp
-#Dream League Soccer
-- DST-PORT,60970-60980,TrafficPortGames,udp
-#Among Us
-- DST-PORT,27015-27030/27036-27037,TrafficPortGames,tcp
-- DST-PORT,4380/27000-27031/27036,TrafficPortGames,udp
-#Bleach ES
-- DST-PORT,14422,TrafficPortGames
-# growrtopia
-- DST-PORT,16999,TrafficPortGames
-# apex|ff|mlbbb
-- DST-PORT,8888,TrafficPortGames
-#for ALL ports games
-- NOT,((RULE-SET,rule_umum)),TrafficPortGames
-- GEOSITE,rule-gaming,TrafficGaming
-#Traffic Umum
-- RULE-SET,rule_umum,TrafficUmum
+  - DST-PORT,22,TrafficDirect
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOSITE,rule-malicious,REJECT
+  - GEOSITE,oisd-full,TrafficAds
+  - GEOSITE,rule-ads,TrafficAds
+  - GEOSITE,oisd-nsfw,TrafficPorn
+  - GEOSITE,category-porn,TrafficPorn
+  - GEOSITE,rule-umum,TrafficUmum
+  #Zerotier
+  - OR,((GEOSITE,rule-umum),(DST-PORT,9993/29994/40775/43215)),TrafficUmum
+  - GEOSITE,rule-indo,TrafficIndo
+  - GEOIP,netflix,TrafficIndo
+  - GEOSITE,rule-streaming,TrafficStreaming
+  - GEOSITE,rule-sosmed,TrafficSosmed
+  - GEOIP,facebook,TrafficSosmed
+  - GEOIP,twitter,TrafficSosmed
+  - GEOIP,telegram,TrafficSosmed
+  - GEOSITE,videoconference,TrafficStreaming
+  #VideoConference
+  - DST-PORT,3478-3497/8801-8810/16384-16387/1853/8200/5004/9000/5090-5091/5349/10000/19302-19309/5938/5060-5061/500/4500,TrafficStreaming
+  #MLBB
+  - DST-PORT,5000-5221/5224-5227/5229-5241/5243-5287/5289-5352/5354-5509/5517/5520-5529/5551-5559/5601-5700/8443/9000-9010/9443/10003/30000-30300,TrafficPortGames,tcp
+  - DST-PORT,5517-5529/5551-5559/5601-5700/8001/8130/8443/9000-9010/9120/9992/10003/30000-30300,TrafficPortGames,udp
+  #FF
+  - DST-PORT,6006/6008/6674/7006-7008/7889/8001-8012/9006/9137/10000-10012/11000-11019/12006/12008/13006/15006/20561/39003/39006/39698/39779/39800,TrafficPortGames,tcp
+  - DST-PORT,6006/6008/6674/7006-7008/7889/8008/8001-8012/8130/8443/9008/9120/10000-10015/10100/11000-11019/12008/13008,TrafficPortGames,udp
+  #PUBG
+  - DST-PORT,7889/10012/13004/14000/17000/17500/18081/20000-20002/20371,TrafficPortGames,tcp
+  - DST-PORT,8011/9030/10491/10612/12235/13004/13748/17000/17500/20000-20002/7086-7995/10039/10096/11455/12070-12460/13894/13972/41182-41192,TrafficPortGames,udp
+  #CODM
+  - DST-PORT,3013/10000-10019/18082/50000/65010/65050,TrafficPortGames,tcp
+  - DST-PORT,7085-7995/8700/9030/10010-10019/17000-20100,TrafficPortGames,udp
+  #AOV
+  - DST-PORT,10001-10094,TrafficPortGames,tcp
+  - DST-PORT,10101-10201/10080-10110/17000-18000,TrafficPortGames,udp
+  #Stumble Guys
+  - DST-PORT,5055-5058,TrafficPortGames,udp
+  #Genshin Impact
+  - DST-PORT,42472,TrafficPortGames,tcp
+  - DST-PORT,42472/22101-22102,TrafficPortGames,udp
+  #Clash of Clans (COC) & Clash Royale
+  - DST-PORT,9330-9340,TrafficPortGames,tcp
+  - DST-PORT,9330-9340,TrafficPortGames,udp
+  #League of Legends (LOL) Mobile
+  - DST-PORT,2080-2099,TrafficPortGames,tcp
+  - DST-PORT,5100,TrafficPortGames,udp
+  #DOTA2
+  - DST-PORT,9100-9200/8230-8250/8110-8120/27000-28998,TrafficPortGames,tcp
+  - DST-PORT,27000-28998/39000,TrafficPortGames,udp
+  #FIFA ONLINE
+  - DST-PORT,7770-7790,TrafficPortGames,tcp
+  - DST-PORT,16300-16350,TrafficPortGames,udp
+  #Point Blank Mobile (PB-Mobile)
+  - DST-PORT,44590-44610,TrafficPortGames,tcp
+  - DST-PORT,40000-40010,TrafficPortGames,udp
+  #LINE Let’s Get Rich
+  - DST-PORT,10500-10515,TrafficPortGames,tcp
+  #Dream League Soccer
+  - DST-PORT,60970-60980,TrafficPortGames,udp
+  #Among Us
+  - DST-PORT,27015-27030/27036-27037,TrafficPortGames,tcp
+  - DST-PORT,4380/27000-27031/27036,TrafficPortGames,udp
+  #Bleach ES
+  - DST-PORT,14422,TrafficPortGames
+  # growrtopia
+  - DST-PORT,16999,TrafficPortGames
+  # apex|ff|mlbbb
+  - DST-PORT,8888,TrafficPortGames
+  #for ALL ports games
+  - NOT,((RULE-SET,rule_umum)),TrafficPortGames
+  - GEOSITE,rule-gaming,TrafficGaming
+  #Traffic Umum
+  - RULE-SET,rule_umum,TrafficUmum
 #Match
 #- PROCESS-NAME,com.termux,TrafficUmum
 rule-providers:
