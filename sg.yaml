@@ -44,7 +44,7 @@ proxies:
       headers:
         Host: do3.kitu.xyz
     udp: true
- - name: v2ray1.udpgw.com
+  - name: v2ray1.udpgw.com
     server: 104.21.21.147
     port: 443
     type: vmess
@@ -60,7 +60,7 @@ proxies:
       headers:
         Host: v2ray1.udpgw.com
     udp: true
- - name: dewabizz1
+  - name: dewabizz1
     server: 104.21.21.147
     port: 443
     type: vmess
