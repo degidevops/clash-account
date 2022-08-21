@@ -342,7 +342,7 @@ rules:
   - GEOSITE,category-porn,TrafficPorn
   - GEOSITE,rule-umum,TrafficUmum
   #Zerotier
-  - DST-PORT,9993/29994/40775/43215,TrafficUmum
+  - OR,((GEOSITE,rule-umum),(DST-PORT,9993/29994/40775/43215)),TrafficUmum
   - GEOSITE,rule-indo,TrafficIndo
   - GEOIP,netflix,TrafficIndo
   - GEOSITE,rule-streaming,TrafficStreaming
@@ -402,12 +402,12 @@ rules:
   # apex|ff|mlbbb
   - DST-PORT,8888,TrafficPortGames
   #for ALL ports games
-  #- NOT,((RULE-SET,rule_umum)),TrafficPortGames
+  - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - GEOSITE,rule-gaming,TrafficGaming
   #Traffic Umum
   - RULE-SET,rule_umum,TrafficUmum
   #Match
-  #- MATCH,TrafficUmum
+  - MATCH,TrafficUmum
   #- PROCESS-NAME,com.termux,TrafficUmum
 rule-providers:
   rule_umum:
