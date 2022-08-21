@@ -155,7 +155,7 @@ geodata-mode: true
 geodata-loader: memconservative
 tcp-concurrent: true
 unified-delay: false
-use-process: true
+enable-process: true
 allow-lan: true
 bind-address: "*"
 mode: rule
@@ -351,7 +351,7 @@ rules:
   - RULE-SET,rule_umum,TrafficUmum
   #Match
   - MATCH,TrafficUmum
-  - PROCESS-NAME,"com.termux",TrafficGaming
+  - PROCESS-NAME, com.termux, TrafficGaming
 rule-providers:
   rule_umum:
     type: http
