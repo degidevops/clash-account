@@ -402,7 +402,7 @@ rules:
   # apex|ff|mlbbb
   - DST-PORT,8888,TrafficPortGames
   #for ALL ports games
-  - NOT,((RULE-SET,rule_umum)),TrafficPortGames
+  #- NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - GEOSITE,rule-gaming,TrafficGaming
   #Traffic Umum
   - RULE-SET,rule_umum,TrafficUmum
