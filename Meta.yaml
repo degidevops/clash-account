@@ -1,21 +1,11 @@
 ---
 proxy-providers:
-  VMESS-ID:
+  VMESS:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-id.yaml
-    path: "./proxy/vmess-id.yaml"
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess.yaml
+    path: "./proxy/vmess.yaml"
     interval: 86400
-    health-check:
-      enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 30
-  VMESS-SG:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-sg.yaml
-    interval: 86400
-    path: "./proxy/vmess-sg.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
@@ -30,22 +20,12 @@ proxy-providers:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 30
-  VLESS-ID:
+  VLESS:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-id.yaml
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless.yaml
     path: "./proxy/vless-id.yaml"
     interval: 86400
-    health-check:
-      enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 30
-  VLESS-SG:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-sg.yaml
-    interval: 86400
-    path: "./proxy/vless-sg.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
@@ -60,22 +40,12 @@ proxy-providers:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 30
-  TROJAN-ID:
+  TROJAN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-id.yaml
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan.yaml
     path: "./proxy/trojan-id.yaml"
     interval: 86400
-    health-check:
-      enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 30
-  TROJAN-SG:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-sg.yaml
-    interval: 86400
-    path: "./proxy/trojan-sg.yaml"
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
@@ -91,22 +61,22 @@ proxy-providers:
       url: http://cp.cloudflare.com/generate_204
       interval: 30
 proxy-groups:
-  - name: Route ID
+  - name: Route 1
     type: load-balance
     strategy: round-robin
     use:
-      - VMESS-ID
-      - VLESS-ID
-      - TROJAN-ID
+      - VMESS
+      - VLESS
+      - TROJAN
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: Route SG
+  - name: Route 2
     type: load-balance
     strategy: round-robin
     use:
-      - VMESS-SG
-      - VLESS-SG
-      - TROJAN-SG
+      - VMESS
+      - VLESS
+      - TROJAN
     url: http://cp.cloudflare.com/generate_204
     interval: 480
   - name: Route GAME
@@ -121,8 +91,8 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - Route ID
-      - Route SG
+      - Route 1
+      - Route 2
   - name: TrafficPortGames
     type: select
     proxies:
@@ -141,14 +111,14 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - Route SG
-      - Route ID
+      - Route 1
+      - Route 2
   - name: TrafficPorn
     type: select
     proxies:
       - REJECT
-      - Route SG
-      - Route ID
+      - Route 1
+      - Route 2
   - name: TrafficUmum
     type: fallback
     lazy: true
@@ -161,25 +131,24 @@ proxy-groups:
     type: fallback
     lazy: true
     proxies:
-      - Route ID
-      - Route SG
-      - TrafficDirect
+      - Route 1
+      - Route 2
     url: http://cp.cloudflare.com/generate_204
     interval: 30
   - name: TrafficStreaming
     type: fallback
     lazy: true
     proxies:
-      - Route SG
-      - Route ID
+      - Route 1
+      - Route 2
     url: http://cp.cloudflare.com/generate_204
     interval: 30
   - name: TrafficSosmed
     type: fallback
     lazy: true
     proxies:
-      - Route ID
-      - Route SG
+      - Route 1
+      - Route 2
     url: http://cp.cloudflare.com/generate_204
     interval: 30
 port: 7890
@@ -253,8 +222,8 @@ dns:
     geoip-code: ID
     geosite:
       - rule-indo
-    #- gfw
-    #- greatfire
+      - gfw
+      - greatfire
     ipcidr:
       - 240.0.0.0/4
     domain:
