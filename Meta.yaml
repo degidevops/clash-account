@@ -154,7 +154,7 @@ tproxy-port: 7898
 geodata-mode: true
 geodata-loader: memconservative
 tcp-concurrent: true
-unified-delay: true
+unified-delay: false
 use-process: true
 allow-lan: true
 bind-address: "*"
