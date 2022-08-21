@@ -94,27 +94,27 @@ proxy-groups:
   - name: Route ID
     type: load-balance
     strategy: round-robin
-    proxies:
-      - VMESS ID
-      - VLESS ID
-      - TROJAN ID
+    use:
+      - VMESS-ID
+      - VLESS-ID
+      - TROJAN-ID
     url: http://cp.cloudflare.com/generate_204
     interval: 480
   - name: Route SG
     type: load-balance
     strategy: round-robin
-    proxies:
-      - VMESS SG
-      - VLESS SG
-      - TROJAN SG
+    use:
+      - VMESS-SG
+      - VLESS-SG
+      - TROJAN-SG
     url: http://cp.cloudflare.com/generate_204
     interval: 480
   - name: Route GAME
     type: url-test
-    proxies:
-      - VMESS GAME
-      - VLESS GAME
-      - TROJAN GAME
+    use:
+      - VMESS-GAME
+      - VLESS-GAME
+      - TROJAN-GAME
     url: http://cp.cloudflare.com/generate_204
     interval: 600
   - name: TrafficDirect
@@ -133,9 +133,10 @@ proxy-groups:
     proxies:
       - Route GAME
       - TrafficDirect
-      - VMESS GAME
-      - VLESS GAME
-      - TROJAN GAME
+    use:
+      - VMESS-GAME
+      - VLESS-GAME
+      - TROJAN-GAME
   - name: TrafficAds
     type: select
     proxies:
@@ -181,61 +182,61 @@ proxy-groups:
       - Route SG
     url: http://cp.cloudflare.com/generate_204
     interval: 30
-  - name: VMESS ID
+  - name: VMESS-ID
     type: load-balance
     strategy: round-robin
     use:
       - VMESS-ID
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: VMESS SG
+  - name: VMESS-SG
     type: load-balance
     strategy: round-robin
     use:
       - VMESS-SG
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: VMESS GAME
+  - name: VMESS-GAME
     type: url-test
     use:
       - VMESS-GAME
     url: http://cp.cloudflare.com/generate_204
     interval: 600
-  - name: VLESS ID
+  - name: VLESS-ID
     type: load-balance
     strategy: round-robin
     use:
       - VLESS-ID
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: VLESS SG
+  - name: VLESS-SG
     type: load-balance
     strategy: round-robin
     use:
       - VLESS-SG
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: VLESS GAME
+  - name: VLESS-GAME
     type: url-test
     use:
       - VLESS-GAME
     url: http://cp.cloudflare.com/generate_204
     interval: 600
-  - name: TROJAN ID
+  - name: TROJAN-ID
     type: load-balance
     strategy: round-robin
     use:
       - TROJAN-ID
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: TROJAN SG
+  - name: TROJAN-SG
     type: load-balance
     strategy: round-robin
     use:
       - TROJAN-SG
     url: http://cp.cloudflare.com/generate_204
     interval: 480
-  - name: TROJAN GAME
+  - name: TROJAN-GAME
     type: url-test
     use:
       - TROJAN-GAME
