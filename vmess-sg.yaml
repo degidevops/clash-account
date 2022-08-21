@@ -1,3 +1,4 @@
+proxies:
   - name: v2ray1.udpgw.com
     server: 104.21.21.147
     port: 443
