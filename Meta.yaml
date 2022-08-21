@@ -497,6 +497,7 @@ rules:
   #Traffic Umum
   - RULE-SET,rule_umum,TrafficUmum
 #Match
+  -MATCH,TrafficUmum
 #- PROCESS-NAME,com.termux,TrafficUmum
 rule-providers:
   rule_umum:
