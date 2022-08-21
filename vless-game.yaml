@@ -1,1 +1,14 @@
-vless://7be7012b-8ab9-46fc-aa5f-597a9d509713@104.21.21.147:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=xray-vless-grpc&sni=do1.kitu.xyz#whyvpn-msecure1
+proxies:
+  - name: whyvpn-msecure1
+    server: 104.21.21.147
+    port: 443
+    type: vless
+    uuid: 7be7012b-8ab9-46fc-aa5f-597a9d509713
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do1.kitu.xyz
+    network: grpc
+    grpc-opts:
+      grpc-service-name: xray-vless-grpc
+    udp: true
