@@ -414,5 +414,5 @@ rule-providers:
     type: http
     behavior: classical
     path: "./rule/rule_umum.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_umum.yaml
+    url: https://raw.githubusercontent.com/malikshi/open_meta/main/rule_provider/rule_umum.yaml
     interval: 86400
