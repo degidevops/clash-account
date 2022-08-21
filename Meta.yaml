@@ -496,7 +496,7 @@ rules:
   - GEOSITE,rule-gaming,TrafficGaming
   #Traffic Umum
   - RULE-SET,rule_umum,TrafficUmum
-#Match
+  #Match
   - MATCH,TrafficUmum
 #- PROCESS-NAME,com.termux,TrafficUmum
 rule-providers:
