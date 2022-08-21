@@ -351,7 +351,7 @@ rules:
   - RULE-SET,rule_umum,TrafficUmum
   #Match
   - MATCH,TrafficUmum
-#- PROCESS-NAME,com.termux,TrafficUmum
+  - PROCESS-NAME,com.termux,TrafficGaming
 rule-providers:
   rule_umum:
     type: http
