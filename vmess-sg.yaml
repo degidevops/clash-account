@@ -1,2 +1,16 @@
-vmess://eyJhZGQiOiIxMDQuMjEuMjEuMTQ3IiwiYWlkIjoiMCIsImhvc3QiOiJ2MnJheTEudWRwZ3cuY29tIiwiaWQiOiI5ZTczMzUwNS1jMGM3LTRhNTMtYjVhYS1mMDg0NTdlOGU3ZGMiLCJuZXQiOiJ3cyIsInBhdGgiOiIvaG93ZHkiLCJwb3J0IjoiNDQzIiwicHMiOiJ2MnJheTEudWRwZ3cuY29tIiwic2N5IjoiYXV0byIsInNuaSI6InYycmF5MS51ZHBndy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-vmess://eyJhZGQiOiIxMDQuMjEuMjEuMTQ3IiwiYWlkIjoiMCIsImhvc3QiOiJ2MnJheTEudWRwZ3cuY29tIiwiaWQiOiI5ZTczMzUwNS1jMGM3LTRhNTMtYjVhYS1mMDg0NTdlOGU3ZGMiLCJuZXQiOiJ3cyIsInBhdGgiOiIvaG93ZHkiLCJwb3J0IjoiNDQzIiwicHMiOiJ2MnJheTEudWRwZ3cuY29tIiwic2N5IjoiYXV0byIsInNuaSI6InYycmF5MS51ZHBndy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+  - name: v2ray1.udpgw.com
+    server: 104.21.21.147
+    port: 443
+    type: vmess
+    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: v2ray1.udpgw.com
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: v2ray1.udpgw.com
+    udp: true
