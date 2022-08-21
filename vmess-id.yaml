@@ -1,1 +1,17 @@
-vmess://02d47781-43cc-4499-a8f7-12ffb4378b81@104.21.21.147:443?encryption=auto&host=dewabiz2.kitu.xyz&path=%2Fvmess%2F&security=tls&sni=dewabiz2.kitu.xyz&type=ws#bizz
+proxies:
+  - name: dewabizz1
+    server: 104.21.21.147
+    port: 443
+    type: vmess
+    uuid: 02d47781-43cc-4499-a8f7-12ffb4378b81
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: dewabiz2.kitu.xyz
+    network: ws
+    ws-opts:
+      path: /vmess/
+      headers:
+        Host: dewabiz2.kitu.xyz
+    udp: true
