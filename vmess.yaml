@@ -95,3 +95,35 @@ proxies:
       headers:
         Host: sgv-6.openv2ray.com
     udp: true
+  - name: do1
+    server: 104.21.21.147
+    port: 443
+    type: vmess
+    uuid: be8d6d67-190e-42ac-a564-8ce29c7232c5
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: do1.kitu.xyz
+    network: ws
+    ws-opts:
+      path: /vmess/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: do1 byu
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: 02d47781-43cc-4499-a8f7-12ffb4378b81
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/vmess/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
