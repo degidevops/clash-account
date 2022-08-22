@@ -96,8 +96,8 @@ proxy-groups:
   - name: TrafficPortGames
     type: select
     proxies:
-      - TrafficDirect
       - Route GAME
+      - TrafficDirect
   - name: TrafficGaming
     type: select
     proxies:
