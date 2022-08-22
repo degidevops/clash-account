@@ -9,7 +9,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 180
   VMESS-GAME:
     type: http
     behavior: classical
@@ -19,7 +19,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 180
   VLESS:
     type: http
     behavior: classical
@@ -29,7 +29,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 180
   VLESS-GAME:
     type: http
     behavior: classical
@@ -39,7 +39,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 180
   TROJAN:
     type: http
     behavior: classical
@@ -49,7 +49,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 180
   TROJAN-GAME:
     type: http
     behavior: classical
@@ -59,7 +59,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 30
+      interval: 180
 proxy-groups:
   - name: Route 1
     type: load-balance
@@ -69,7 +69,7 @@ proxy-groups:
       - VLESS
       - TROJAN
     url: http://cp.cloudflare.com/generate_204
-    interval: 480
+    interval: 240
   - name: Route 2
     type: load-balance
     strategy: round-robin
@@ -78,7 +78,7 @@ proxy-groups:
       - VLESS
       - TROJAN
     url: http://cp.cloudflare.com/generate_204
-    interval: 480
+    interval: 240
   - name: Route GAME
     type: url-test
     use:
