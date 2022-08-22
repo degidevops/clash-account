@@ -411,7 +411,7 @@ rules:
   #Process-Name
   #- PROCESS-NAME,com.termux,TrafficUmum
   #- PROCESS-NAME,com.higgs.domino,TrafficGaming
-  - AND,((PROCESS-NAME,com.higgs.domino) && (RULE-SET,rule_umum)),TrafficGaming
+  #- AND,((PROCESS-NAME,com.higgs.domino) && (RULE-SET,rule_umum)),TrafficGaming
 rule-providers:
   rule_umum:
     type: http
