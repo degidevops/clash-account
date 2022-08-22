@@ -410,7 +410,7 @@ rules:
   #- MATCH,TrafficUmum
   #Process-Name
   - PROCESS-NAME,com.termux,TrafficUmum
-  - PROCESS-NAME,com.kitkagames.fallbuddies,TrafficGaming
+  - PROCESS-NAME,com.higgs.domino,TrafficGaming
 rule-providers:
   rule_umum:
     type: http
