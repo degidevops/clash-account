@@ -222,8 +222,8 @@ dns:
     geoip-code: ID
     geosite:
       - rule-indo
-      - gfw
-      - greatfire
+      #- gfw
+      #- greatfire
     ipcidr:
       - 240.0.0.0/4
     domain:
