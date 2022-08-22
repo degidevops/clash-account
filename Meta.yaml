@@ -69,7 +69,7 @@ proxy-groups:
       - VLESS
       - TROJAN
     url: http://cp.cloudflare.com/generate_204
-    interval: 240
+    interval: 360
   - name: Route 2
     type: load-balance
     strategy: round-robin
@@ -78,7 +78,7 @@ proxy-groups:
       - VLESS
       - TROJAN
     url: http://cp.cloudflare.com/generate_204
-    interval: 240
+    interval: 360
   - name: Route GAME
     type: url-test
     use:
