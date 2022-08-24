@@ -1,5 +1,31 @@
 proxies:
   - name: sg ojan
+    server: ruangguru.com
+    port: 443
+    type: trojan
+    password: 25ec6670-2347-11ed-8afa-1239d0255272
+    skip-cert-verify: true
+    sni: ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://ruangguru.com/howdy
+      headers:
+        Host: sg8-trojan.bonds.id
+    udp: true
+  - name: id ojan
+    server: ruangguru.com
+    port: 443
+    type: trojan
+    password: 5b1d5970-2347-11ed-8847-1239d0255272
+    skip-cert-verify: true
+    sni: ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://ruangguru.com/howdy
+      headers:
+        Host: idtj-ikd.bonds.id
+    udp: true
+  - name: sg ojan byu
     server: space.byu.id
     port: 443
     type: trojan
@@ -12,7 +38,7 @@ proxies:
       headers:
         Host: sg8-trojan.bonds.id
     udp: true
-  - name: id ojan
+  - name: id ojan byu
     server: space.byu.id
     port: 443
     type: trojan
