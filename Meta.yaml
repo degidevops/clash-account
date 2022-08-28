@@ -337,6 +337,10 @@ dns:
     - "+.media.dssott.com"
     - shark007.net
 rules:
+  #FixDnsLeak
+  - IP-CIDR,127.0.0.1/32,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  #RuleBasic
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
   - GEOSITE,rule-malicious,REJECT
