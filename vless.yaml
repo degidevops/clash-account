@@ -1,24 +1,54 @@
 proxies:
-  - name: do3
-    server: 104.21.21.147
+  - name: otunid-7/9
+    server: ruangguru.com
     port: 443
     type: vless
-    uuid: f0081304-c055-4124-9b49-023f552dd717
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: do3.kitu.xyz
+    servername: ruangguru.com
     network: ws
     ws-opts:
-      path: /xvless/
+      path: wss://ruangguru.com/u/opentunnel.net-msecureid
       headers:
-        Host: do3.kitu.xyz
+        Host: idx-1.openv2ray.com
     udp: true
-  - name: do3 byu
+  - name: otunid-7/9 byu
     server: space.byu.id
     port: 443
     type: vless
-    uuid: f0081304-c055-4124-9b49-023f552dd717
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/u/opentunnel.net-msecureid
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
+  - name: whysg-7/9
+    server: ruangguru.com
+    port: 443
+    type: vless
+    uuid: 54730e1a-3634-4f65-a762-f7ca4e39ff34
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://ruangguru.com/xvless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: whysg-7/9 byu
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 54730e1a-3634-4f65-a762-f7ca4e39ff34
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -27,5 +57,5 @@ proxies:
     ws-opts:
       path: wss://space.byu.id/xvless/
       headers:
-        Host: do3.kitu.xyz
+        Host: do1.kitu.xyz
     udp: true
