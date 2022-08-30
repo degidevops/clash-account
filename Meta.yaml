@@ -9,7 +9,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 240
+      interval: 480
   VMESS-GAME:
     type: http
     behavior: classical
@@ -19,7 +19,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 240
+      interval: 480
   VLESS:
     type: http
     behavior: classical
@@ -29,7 +29,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 240
+      interval: 480
   VLESS-GAME:
     type: http
     behavior: classical
@@ -39,7 +39,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 240
+      interval: 480
   TROJAN:
     type: http
     behavior: classical
@@ -49,7 +49,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 240
+      interval: 480
   TROJAN-GAME:
     type: http
     behavior: classical
@@ -59,7 +59,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
-      interval: 240
+      interval: 480
 proxy-groups:
   - name: Route 1
     type: load-balance
@@ -155,12 +155,13 @@ port: 7890
 socks-port: 7891
 mixed-port: 7893
 redir-port: 7892
-tproxy-port: 7898
+tproxy-port: 9898
 geodata-mode: true
 geodata-loader: memconservative
-tcp-concurrent: true
-unified-delay: false
+tcp-concurrent: false
+unified-delay: true
 enable-process: true
+inbound-tfo: false
 allow-lan: true
 bind-address: "*"
 mode: rule
@@ -192,11 +193,11 @@ sniffer:
 dns:
   enable: true
   listen: 0.0.0.0:7874
-  use-hosts: false
+  use-hosts: true
   default-nameserver:
-    - 1.1.1.1:853
-    - 1.0.0.1:853
-    - 9.9.9.9:853
+    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
+    - tls://9.9.9.9:853
     #- 149.112.112.112
     #- 208.67.222.222
     #- 208.67.220.220
@@ -212,15 +213,15 @@ dns:
   nameserver:
     #- https://dns.cloudflare.com/dns-query
     #- tls://1.1.1.1:853
-    - 1.0.0.1:853
-    - 1.1.1.1:853
-    - 9.9.9.9:853
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tls://9.9.9.9:853
   fallback:
     #- https://dns.cloudflare.com/dns-query
     #- tls://1.1.1.1:853
-    - 1.0.0.1:853
-    - 1.1.1.1:853
-    - 9.9.9.9:863
+    - tls://1.0.0.1:853
+    - tls://1.1.1.1:853
+    - tls://9.9.9.9:863
   fallback-filter:
     geoip: true
     geoip-code: ID
