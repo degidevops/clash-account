@@ -1,6 +1,6 @@
 proxies:
   - name: v2ray1.udpgw.com
-    server: 104.21.21.147
+    server: ruangguru.com
     port: 443
     type: vmess
     uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
@@ -8,10 +8,10 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: v2ray1.udpgw.com
+    servername: ruangguru.com
     network: ws
     ws-opts:
-      path: /howdy
+      path: wss://ruangguru.com/howdy
       headers:
         Host: v2ray1.udpgw.com
     udp: true
@@ -30,100 +30,4 @@ proxies:
       path: wss://space.byu.id/howdy
       headers:
         Host: v2ray1.udpgw.com
-    udp: true
-  - name: dewabizz1
-    server: 104.21.21.147
-    port: 443
-    type: vmess
-    uuid: 02d47781-43cc-4499-a8f7-12ffb4378b81
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: dewabiz2.kitu.xyz
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: dewabiz2.kitu.xyz
-    udp: true
-  - name: dewabizz1 byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: 02d47781-43cc-4499-a8f7-12ffb4378b81
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/vmess/
-      headers:
-        Host: dewabiz2.kitu.xyz
-    udp: true
-  - name: opentunsg
-    server: 104.21.21.147
-    port: 443
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sgv-6.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-msecure
-      headers:
-        Host: sgv-6.openv2ray.com
-    udp: true
-  - name: opentunsg byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecure
-      headers:
-        Host: sgv-6.openv2ray.com
-    udp: true
-  - name: do1
-    server: 104.21.21.147
-    port: 443
-    type: vmess
-    uuid: be8d6d67-190e-42ac-a564-8ce29c7232c5
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: do1.kitu.xyz
-    network: ws
-    ws-opts:
-      path: /vmess/
-      headers:
-        Host: do1.kitu.xyz
-    udp: true
-  - name: do1 byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: 02d47781-43cc-4499-a8f7-12ffb4378b81
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/vmess/
-      headers:
-        Host: do1.kitu.xyz
     udp: true
