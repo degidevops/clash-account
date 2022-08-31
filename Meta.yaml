@@ -172,7 +172,7 @@ external-ui: "dashboard/dist"
 secret: ""
 profile:
   store-selected: true
-  store-fake-ip: false
+  store-fake-ip: true
 sniffer:
   enable: false
   sniffing:
