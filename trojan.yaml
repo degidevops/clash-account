@@ -11,7 +11,7 @@ proxies:
       path: wss://gw.ruangguru.com/howdy
       headers:
         Host: sg8-trojan.bonds.id
-    udp: true
+    #udp: true
   - name: id ojan
     server: gw.ruangguru.com
     port: 443
@@ -24,7 +24,7 @@ proxies:
       path: wss://gw.ruangguru.com/howdy
       headers:
         Host: idtj-ikd.bonds.id
-    udp: true
+    #udp: true
   - name: sg ojan byu
     server: space.byu.id
     port: 443
@@ -37,7 +37,7 @@ proxies:
       path: wss://space.byu.id/howdy
       headers:
         Host: sg8-trojan.bonds.id
-    udp: true
+    #udp: true
   - name: id ojan byu
     server: space.byu.id
     port: 443
@@ -50,4 +50,4 @@ proxies:
       path: wss://space.byu.id/howdy
       headers:
         Host: idtj-ikd.bonds.id
-    udp: true
+    #udp: true
