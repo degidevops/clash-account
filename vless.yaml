@@ -1,16 +1,16 @@
 proxies:
   - name: otunid-7/9
-    server: ruangguru.com
+    server: gw.ruangguru.com
     port: 443
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: ruangguru.com
+    servername: gw.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://ruangguru.com/u/opentunnel.net-msecureid
+      path: wss://gw.ruangguru.com/u/opentunnel.net-msecureid
       headers:
         Host: idx-1.openv2ray.com
     udp: true
@@ -30,17 +30,17 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
   - name: whysg-7/9
-    server: ruangguru.com
+    server: gw.ruangguru.com
     port: 443
     type: vless
     uuid: 54730e1a-3634-4f65-a762-f7ca4e39ff34
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: ruangguru.com
+    servername: gw.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://ruangguru.com/xvless/
+      path: wss://gw.ruangguru.com/xvless/
       headers:
         Host: do1.kitu.xyz
     udp: true
