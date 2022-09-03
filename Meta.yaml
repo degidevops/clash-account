@@ -158,7 +158,7 @@ redir-port: 7892
 tproxy-port: 9898
 geodata-mode: true
 geodata-loader: memconservative
-tcp-concurrent: false
+tcp-concurrent: true
 unified-delay: true
 enable-process: true
 inbound-tfo: false
