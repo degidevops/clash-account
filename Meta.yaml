@@ -94,8 +94,12 @@ proxy-groups:
 - name: TrafficPortGames
   type: select
   proxies:
-  - TrafficDirect
   - Route GAME
+  - TrafficDirect
+  use:
+  - ACCTROJAN-G
+  - ACCVLESS-G
+  - ACCVMESS-G
 - name: TrafficGaming
   type: select
   proxies:
