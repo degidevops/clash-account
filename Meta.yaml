@@ -8,7 +8,7 @@ geodata-loader: memconservative
 tcp-concurrent: true
 unified-delay: true
 enable-process: true
-inbound-tfo: true
+inbound-tfo: false
 allow-lan: true
 bind-address: "*"
 mode: rule
@@ -308,7 +308,7 @@ proxy-groups:
       - LB-1
       - LB-2
   - name: TrafficUmum
-    type: url-test
+    type: fallback
     lazy: true
     proxies:
       - LB-1
