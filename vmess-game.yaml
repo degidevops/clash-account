@@ -3,7 +3,7 @@ proxies:
     server: gw.ruangguru.com
     port: 443
     type: vmess
-    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    uuid: fdf51d53-bc6e-4724-9ca0-527af8111b25
     alterId: 0
     cipher: auto
     tls: true
@@ -19,7 +19,7 @@ proxies:
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    uuid: fdf51d53-bc6e-4724-9ca0-527af8111b25
     alterId: 0
     cipher: auto
     tls: true
@@ -30,4 +30,36 @@ proxies:
       path: wss://space.byu.id/howdy
       headers:
         Host: v2ray1.udpgw.com
+    udp: true
+  - name: otunsg premi 11
+    server: kelas.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecure
+      headers:
+        Host: sgv-5.openv2ray.com
+    udp: true
+  - name: otunsg premi 11 byu
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+    alterId: 16
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/u/opentunnel.net-msecure
+      headers:
+        Host: sgv-5.openv2ray.com
     udp: true
