@@ -3,7 +3,7 @@ proxies:
     server: gw.ruangguru.com
     port: 443
     type: vmess
-    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    uuid: fdf51d53-bc6e-4724-9ca0-527af8111b25
     alterId: 0
     cipher: auto
     tls: true
@@ -19,7 +19,7 @@ proxies:
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    uuid: fdf51d53-bc6e-4724-9ca0-527af8111b25
     alterId: 0
     cipher: auto
     tls: true
