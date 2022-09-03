@@ -14,7 +14,7 @@ proxies:
       path: wss://gw.ruangguru.com/howdy
       headers:
         Host: v2ray1.udpgw.com
-    udp: true
+    #udp: true
   - name: v2ray1.udpgw.com byu
     server: space.byu.id
     port: 443
@@ -30,7 +30,7 @@ proxies:
       path: wss://space.byu.id/howdy
       headers:
         Host: v2ray1.udpgw.com
-    udp: true
+    #udp: true
   - name: otunsg premi 11
     server: kelas.ruangguru.com
     port: 443
@@ -46,7 +46,7 @@ proxies:
       path: wss://kelas.ruangguru.com/u/opentunnel.net-msecure
       headers:
         Host: sgv-5.openv2ray.com
-    udp: true
+    #udp: true
   - name: otunsg premi 11 byu
     server: space.byu.id
     port: 443
@@ -62,4 +62,4 @@ proxies:
       path: wss://space.byu.id/u/opentunnel.net-msecure
       headers:
         Host: sgv-5.openv2ray.com
-    udp: true
+    #udp: true
