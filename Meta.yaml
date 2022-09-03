@@ -76,7 +76,7 @@ dns:
       - "+.google.com"
       - "+.facebook.com"
       - "+.youtube.com"
-      #- "+ruangguru*"
+      - "*.ruangguru.com"
       #- "space.byu.id"
   ipv6: false
   fake-ip-filter:
