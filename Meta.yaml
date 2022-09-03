@@ -1,4 +1,7 @@
----
+geox-url:
+  mmdb: "https://cdn.jsdelivr.net/gh/Dreamcro/maxmind-geoip@release/Country.mmdb"
+  geoip: "https://github.com/malikshi/v2ray-rules-dat/raw/release/geoip.dat"
+  geosite: "https://github.com/malikshi/v2ray-rules-dat/raw/release/geosite.dat"
 proxy-providers:
   VMESS:
     type: http
@@ -422,10 +425,6 @@ rule-providers:
     path: "./rule/rule_umum.yaml"
     url: https://raw.githubusercontent.com/malikshi/open_meta/main/rule_provider/rule_umum.yaml
     interval: 86400
-geox-url:
-  mmdb: "https://cdn.jsdelivr.net/gh/Dreamcro/maxmind-geoip@release/Country.mmdb"
-  geoip: "https://github.com/malikshi/v2ray-rules-dat/raw/release/geoip.dat"
-  geosite: "https://github.com/malikshi/v2ray-rules-dat/raw/release/geosite.dat"
 hosts:
   "space.byu.id": 162.159.128.79
   #"space.byu.id": 162.159.128.78
