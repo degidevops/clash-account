@@ -12,7 +12,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 480
   ACCVLESS:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless.yaml
@@ -21,7 +21,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 480
   ACCTROJAN:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan.yaml
@@ -30,7 +30,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 480
   ACCTROJAN-G:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-game.yaml
@@ -39,7 +39,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 480
   ACCVLESS-G:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-game.yaml
@@ -48,7 +48,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 480
   ACCVMESS-G:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-game.yaml
@@ -57,7 +57,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 480
 proxy-groups:
 - name: LB-1
   type: load-balance
@@ -67,7 +67,7 @@ proxy-groups:
   - ACCVLESS
   - ACCVMESS
   url: http://www.gstatic.com/generate_204
-  interval: 360
+  interval: 480
 - name: LB-2
   type: load-balance
   strategy: round-robin
@@ -76,7 +76,7 @@ proxy-groups:
   - ACCVLESS
   - ACCVMESS
   url: http://www.gstatic.com/generate_204
-  interval: 360
+  interval: 480
 - name: Route GAME
   type: url-test
   use:
@@ -122,14 +122,14 @@ proxy-groups:
   - LB-1
   - LB-2
 - name: TrafficUmum
-  type: fallback
+  type: url-test
   lazy: true
   proxies:
   - LB-1
   - LB-2
   - DIRECT
   url: http://www.gstatic.com/generate_204
-  interval: 30
+  interval: 480
 port: 7890
 socks-port: 7891
 mixed-port: 7893
