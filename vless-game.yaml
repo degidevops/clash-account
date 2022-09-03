@@ -13,7 +13,7 @@ proxies:
       path: wss://gw.ruangguru.com/u/opentunnel.net-msecureid
       headers:
         Host: idx-1.openv2ray.com
-    udp: true
+    #udp: true
   - name: otunid-7/9 byu
     server: space.byu.id
     port: 443
@@ -28,7 +28,7 @@ proxies:
       path: wss://space.byu.id/u/opentunnel.net-msecureid
       headers:
         Host: idx-1.openv2ray.com
-    udp: true
+    #udp: true
   - name: whysg-7/9
     server: gw.ruangguru.com
     port: 443
@@ -43,7 +43,7 @@ proxies:
       path: wss://gw.ruangguru.com/xvless/
       headers:
         Host: do1.kitu.xyz
-    udp: true
+    #udp: true
   - name: whysg-7/9 byu
     server: space.byu.id
     port: 443
@@ -58,4 +58,4 @@ proxies:
       path: wss://space.byu.id/xvless/
       headers:
         Host: do1.kitu.xyz
-    udp: true
+    #udp: true
