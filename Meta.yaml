@@ -251,6 +251,7 @@ proxy-groups:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
     interval: 480
+    #disable-udp: false
   - name: LB-2
     type: load-balance
     strategy: round-robin
@@ -260,6 +261,7 @@ proxy-groups:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
     interval: 480
+    #disable-udp: false
   - name: Route GAME
     type: url-test
     use:
@@ -268,6 +270,7 @@ proxy-groups:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
     interval: 600
+    #disable-udp: false
   - name: TrafficDirect
     type: select
     proxies:
@@ -335,3 +338,6 @@ rule-providers:
     path: "./rule_provider/rule_umum.yaml"
     url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_umum.yaml
     interval: 86400
+hosts:
+  "*.ruangguru.com": 104.18.2.2
+  "space.byu.id": 162.159.128.79
