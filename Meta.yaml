@@ -245,6 +245,7 @@ proxy-groups:
   - name: LB-1
     type: load-balance
     strategy: round-robin
+    disable-udp: false
     use:
       - ACCTROJAN
       - ACCVLESS
@@ -254,6 +255,7 @@ proxy-groups:
   - name: LB-2
     type: load-balance
     strategy: round-robin
+    disable-udp: false
     use:
       - ACCTROJAN
       - ACCVLESS
@@ -262,6 +264,7 @@ proxy-groups:
     interval: 480
   - name: Route GAME
     type: url-test
+    disable-udp: false
     use:
       - ACCTROJAN-G
       - ACCVLESS-G
@@ -270,12 +273,14 @@ proxy-groups:
     interval: 600
   - name: TrafficDirect
     type: select
+    disable-udp: false
     proxies:
       - DIRECT
       - LB-1
       - LB-2
   - name: TrafficPortGames
     type: select
+    disable-udp: false
     proxies:
       - Route GAME
       - TrafficDirect
@@ -285,6 +290,7 @@ proxy-groups:
       - ACCVMESS-G
   - name: TrafficGaming
     type: select
+    disable-udp: false
     proxies:
       - Route GAME
       - TrafficDirect
@@ -294,12 +300,14 @@ proxy-groups:
       - ACCVMESS-G
   - name: TrafficAds
     type: select
+    disable-udp: false
     proxies:
       - REJECT
       - LB-1
       - LB-2
   - name: TrafficPorn
     type: select
+    disable-udp: false
     proxies:
       - REJECT
       - LB-1
@@ -307,6 +315,7 @@ proxy-groups:
   - name: TrafficUmum
     type: url-test
     lazy: true
+    disable-udp: false
     proxies:
       - LB-1
       - LB-2
