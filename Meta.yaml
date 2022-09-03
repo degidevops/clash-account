@@ -251,7 +251,7 @@ proxy-groups:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
     interval: 480
-    disable-udp: false
+    #disable-udp: false
   - name: LB-2
     type: load-balance
     strategy: round-robin
@@ -261,7 +261,7 @@ proxy-groups:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
     interval: 480
-    disable-udp: false
+    #disable-udp: false
   - name: Route GAME
     type: url-test
     use:
@@ -270,7 +270,7 @@ proxy-groups:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
     interval: 600
-    disable-udp: false
+    #disable-udp: false
   - name: TrafficDirect
     type: select
     proxies:
