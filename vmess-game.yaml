@@ -1,2 +1,33 @@
 proxies:
-  -
+  - name: v2ray1.udpgw.com
+    server: gw.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: gw.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://gw.ruangguru.com/howdy
+      headers:
+        Host: v2ray1.udpgw.com
+    udp: true
+  - name: v2ray1.udpgw.com byu
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: 9e733505-c0c7-4a53-b5aa-f08457e8e7dc
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/howdy
+      headers:
+        Host: v2ray1.udpgw.com
+    udp: true
