@@ -313,7 +313,7 @@ proxy-groups:
     proxies:
       - LB-1
       - LB-2
-      - DIRECT
+      #- DIRECT
     url: http://www.gstatic.com/generate_204
     interval: 480
 rules:
