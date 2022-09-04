@@ -18,9 +18,9 @@ external-controller: 0.0.0.0:9090
 external-ui: "dashboard/dist"
 profile:
   store-selected: true
-  store-fake-ip: false
+  store-fake-ip: true
 sniffer:
-  enable: false
+  enable: true
   sniffing:
     - tls
     - http
@@ -54,7 +54,7 @@ dns:
     - 76.76.10.0
     - 94.140.14.140
     - 94.140.14.141
-    - 172.105.216.54
+    #- 172.105.216.54
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
