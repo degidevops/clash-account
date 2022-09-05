@@ -18,9 +18,9 @@ external-controller: 0.0.0.0:9090
 external-ui: "dashboard/dist"
 profile:
   store-selected: true
-  store-fake-ip: true
+  store-fake-ip: false
 sniffer:
-  enable: true
+  enable: false
   sniffing:
     - tls
     - http
@@ -222,7 +222,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 120
+      interval: 600
   ACCVLESS-G:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-game.yaml
@@ -231,7 +231,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 120
+      interval: 600
   ACCVMESS-G:
     type: http
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-game.yaml
@@ -240,7 +240,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 120
+      interval: 600
 proxy-groups:
   - name: LB-1
     type: load-balance
