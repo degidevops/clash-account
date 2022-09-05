@@ -250,7 +250,7 @@ proxy-groups:
       - ACCVLESS
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 360
     disable-udp: false
   - name: LB-2
     type: load-balance
@@ -260,7 +260,7 @@ proxy-groups:
       - ACCVLESS
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 360
     disable-udp: false
   - name: Route GAME
     type: url-test
