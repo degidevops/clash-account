@@ -74,7 +74,7 @@ proxies:
       headers:
         Host: sgx-3.openv2ray.com
     #udp: true
-  - name: otunid-7/9 byu
+  - name: otunsg-14 byu
     server: space.byu.id
     port: 443
     type: vless
