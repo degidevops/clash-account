@@ -278,7 +278,7 @@ proxy-groups:
     use:
       - ACCTROJAN-G
       - ACCVLESS-G
-      - ACCVMESS-G
+      #- ACCVMESS-G
     url: http://www.gstatic.com/generate_204
     interval: 600
     disable-udp: false
