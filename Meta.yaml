@@ -331,7 +331,7 @@ rules:
   - GEOSITE,oisd-nsfw,TrafficPorn
   - GEOSITE,category-porn,TrafficPorn
   - GEOSITE,rule-umum,TrafficUmum
-  #for ALL ports games
+  ##for ALL ports games
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - GEOSITE,rule-gaming,TrafficGaming
   #Traffic Umum
