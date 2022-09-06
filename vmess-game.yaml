@@ -1,9 +1,9 @@
 proxies:
-  - name: v2ray1.udpgw.com
+  - name: v2ray2.udpgw.com
     server: gw.ruangguru.com
     port: 443
     type: vmess
-    uuid: fdf51d53-bc6e-4724-9ca0-527af8111b25
+    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
     alterId: 0
     cipher: auto
     tls: true
@@ -13,13 +13,13 @@ proxies:
     ws-opts:
       path: wss://gw.ruangguru.com/howdy
       headers:
-        Host: v2ray1.udpgw.com
+        Host: v2ray2.udpgw.com
     #udp: true
-  - name: v2ray1.udpgw.com byu
+  - name: v2ray2.udpgw.com byu
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: fdf51d53-bc6e-4724-9ca0-527af8111b25
+    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
     alterId: 0
     cipher: auto
     tls: true
@@ -29,7 +29,7 @@ proxies:
     ws-opts:
       path: wss://space.byu.id/howdy
       headers:
-        Host: v2ray1.udpgw.com
+        Host: v2ray2.udpgw.com
     #udp: true
   - name: otunsg premi 11
     server: kelas.ruangguru.com
