@@ -1,5 +1,5 @@
 proxies:
-  - name: sg ojan
+  - name: G sg ojan
     server: kelas.ruangguru.com
     port: 443
     type: trojan
@@ -12,7 +12,7 @@ proxies:
       headers:
         Host: sg8-trojan.bonds.id
     #udp: true
-  - name: id ojan
+  - name: G id ojan
     server: kelas.ruangguru.com
     port: 443
     type: trojan
@@ -25,7 +25,7 @@ proxies:
       headers:
         Host: idtj-ikd.bonds.id
     #udp: true
-  - name: sg ojan byu
+  - name: G sg ojan byu
     server: space.byu.id
     port: 443
     type: trojan
@@ -38,7 +38,7 @@ proxies:
       headers:
         Host: sg8-trojan.bonds.id
     #udp: true
-  - name: id ojan byu
+  - name: G id ojan byu
     server: space.byu.id
     port: 443
     type: trojan
