@@ -267,16 +267,16 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 240
     disable-udp: false
-  #- name: LB-2
-    #type: load-balance
-    #strategy: round-robin
-    #use:
-      #- ACCTROJAN
-      #- ACCVLESS
-      #- ACCVMESS
-    #url: http://www.gstatic.com/generate_204
-    #interval: 240
-    #disable-udp: false
+  - name: LB-2
+    type: load-balance
+    strategy: round-robin
+    use:
+      - ACCTROJAN
+      - ACCVLESS
+      - ACCVMESS
+    url: http://www.gstatic.com/generate_204
+    interval: 240
+    disable-udp: false
   - name: Route GAME
     type: url-test
     use:
@@ -291,7 +291,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - LB-1
-      #- LB-2
+      - LB-2
   - name: TrafficPortGames
     type: select
     proxies:
@@ -315,19 +315,19 @@ proxy-groups:
     proxies:
       - REJECT
       - LB-1
-      #- LB-2
+      - LB-2
   - name: TrafficPorn
     type: select
     proxies:
       - REJECT
       - LB-1
-      #- LB-2
+      - LB-2
   - name: TrafficUmum
     type: fallback
     lazy: true
     proxies:
       - LB-1
-      #- LB-2
+      - LB-2
       #- DIRECT
     url: http://www.gstatic.com/generate_204
     interval: 120
@@ -353,6 +353,66 @@ rule-providers:
     path: "./rule_provider/rule_umum.yaml"
     url: https://raw.githubusercontent.com/degidevops/open_meta/main/rule_provider/rule_umum.yaml
     interval: 86400
+  AKUNVMESS:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess.yaml
+    path: "./proxy_provider/vmess.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
+  AKUNVLESS:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless.yaml
+    path: "./proxy_provider/vless.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
+  AKUNTROJAN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan.yaml
+    path: "./proxy_provider/trojan.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 120
+  AKUNTROJAN-G:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-game.yaml
+    path: "./proxy_provider/trojan-game.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  AKUNVLESS-G:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-game.yaml
+    path: "./proxy_provider/vless-game.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  AKUNVMESS-G:
+    type: http
+    behavior: classical 
+    url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-game.yaml
+    path: "./proxy_provider/vmess-game.yaml"
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 600 
 hosts:
   "*.ruangguru.com": 104.18.2.2
   "space.byu.id": 162.159.128.79
