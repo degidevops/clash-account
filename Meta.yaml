@@ -204,6 +204,7 @@ proxies:
 proxy-providers:
   ACCVMESS:
     type: http
+    behavior: classical
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess.yaml
     path: "./proxy_provider/vmess.yaml"
     interval: 86400
@@ -213,6 +214,7 @@ proxy-providers:
       interval: 120
   ACCVLESS:
     type: http
+    behavior: classical
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless.yaml
     path: "./proxy_provider/vless.yaml"
     interval: 86400
@@ -222,6 +224,7 @@ proxy-providers:
       interval: 120
   ACCTROJAN:
     type: http
+    behavior: classical
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan.yaml
     path: "./proxy_provider/trojan.yaml"
     interval: 86400
@@ -231,6 +234,7 @@ proxy-providers:
       interval: 120
   ACCTROJAN-G:
     type: http
+    behavior: classical
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/trojan-game.yaml
     path: "./proxy_provider/trojan-game.yaml"
     interval: 86400
@@ -240,6 +244,7 @@ proxy-providers:
       interval: 600
   ACCVLESS-G:
     type: http
+    behavior: classical
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vless-game.yaml
     path: "./proxy_provider/vless-game.yaml"
     interval: 86400
@@ -249,6 +254,7 @@ proxy-providers:
       interval: 600
   ACCVMESS-G:
     type: http
+    behavior: classical
     url: https://raw.githubusercontent.com/degidevops/clash-account/main/vmess-game.yaml
     path: "./proxy_provider/vmess-game.yaml"
     interval: 86400
