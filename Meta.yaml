@@ -60,9 +60,13 @@ dns:
   use-hosts: true
   prefer-h3: true
   nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
     - https://dns.cloudflare.com/dns-query
     - tls://8.8.8.8:853
   fallback:
+    - 1.1.1.1
+    - 8.8.8.8
     - https://dns.google/dns-query
     - tls://1.1.1.1:853
   fallback-filter:
@@ -252,16 +256,16 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 240
     disable-udp: false
-  - name: LB-2
-    type: load-balance
-    strategy: round-robin
-    use:
-      - ACCTROJAN
-      - ACCVLESS
-      - ACCVMESS
-    url: http://www.gstatic.com/generate_204
-    interval: 240
-    disable-udp: false
+  #- name: LB-2
+    #type: load-balance
+    #strategy: round-robin
+    #use:
+      #- ACCTROJAN
+      #- ACCVLESS
+      #- ACCVMESS
+    #url: http://www.gstatic.com/generate_204
+    #interval: 240
+    #disable-udp: false
   - name: Route GAME
     type: url-test
     use:
@@ -276,7 +280,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - LB-1
-      - LB-2
+      #- LB-2
   - name: TrafficPortGames
     type: select
     proxies:
@@ -300,19 +304,19 @@ proxy-groups:
     proxies:
       - REJECT
       - LB-1
-      - LB-2
+      #- LB-2
   - name: TrafficPorn
     type: select
     proxies:
       - REJECT
       - LB-1
-      - LB-2
+      #- LB-2
   - name: TrafficUmum
     type: fallback
     lazy: true
     proxies:
       - LB-1
-      - LB-2
+      #- LB-2
       #- DIRECT
     url: http://www.gstatic.com/generate_204
     interval: 120
