@@ -351,7 +351,7 @@ rule-providers:
     type: http
     behavior: classical
     path: "./rule_provider/rule_umum.yaml"
-    url: https://raw.githubusercontent.com/degidevops/open_clash/main/rule_provider/rule_umum.yaml
+    url: https://raw.githubusercontent.com/degidevops/open_meta/main/rule_provider/rule_umum.yaml
     interval: 86400
 hosts:
   "*.ruangguru.com": 104.18.2.2
