@@ -277,7 +277,7 @@ proxy-groups:
       - ACCVLESS
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 360
+    interval: 180
     disable-udp: false
   - name: Route GAME
     type: url-test
@@ -286,7 +286,7 @@ proxy-groups:
       - ACCVLESS-G
       #- ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 600
+    interval: 360
     tolerance: 50
     disable-udp: false
   - name: TrafficDirect
@@ -328,7 +328,7 @@ proxy-groups:
     proxies:
       - LB-1
     url: http://www.gstatic.com/generate_204
-    interval: 360
+    interval: 180
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
