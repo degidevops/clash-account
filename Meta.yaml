@@ -271,7 +271,7 @@ proxy-groups:
       - ACCVLESS
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 180
     disable-udp: false
   - name: Route GAME
     type: url-test
