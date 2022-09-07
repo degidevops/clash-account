@@ -212,6 +212,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
+      timeout: 15
   ACCVLESS:
     type: http
     behavior: classical
@@ -222,6 +223,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
+      timeout: 15
   ACCTROJAN:
     type: http
     behavior: classical
@@ -232,6 +234,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
+      timeout: 15
   ACCTROJAN-G:
     type: http
     behavior: classical
@@ -242,6 +245,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
+      timeout: 15
   ACCVLESS-G:
     type: http
     behavior: classical
@@ -252,6 +256,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
+      timeout: 15
   ACCVMESS-G:
     type: http
     behavior: classical
@@ -262,6 +267,7 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 180
+      timeout: 15
 proxy-groups:
   - name: LB-1
     type: load-balance
