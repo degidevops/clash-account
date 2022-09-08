@@ -211,7 +211,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 360
+      interval: 560
       #timeout: 1
   ACCVLESS:
     type: http
@@ -222,7 +222,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 360
+      interval: 560
       #timeout: 1
   ACCTROJAN:
     type: http
@@ -233,7 +233,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 360
+      interval: 560
       #timeout: 1
   ACCTROJAN-G:
     type: http
@@ -244,7 +244,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 360
+      interval: 560
       #timeout: 1
   ACCVLESS-G:
     type: http
@@ -255,7 +255,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 360
+      interval: 560
       #timeout: 1
   ACCVMESS-G:
     type: http
@@ -266,7 +266,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 360
+      interval: 560
       #timeout: 1
 proxy-groups:
   - name: LB-1
@@ -277,7 +277,7 @@ proxy-groups:
       - FVLESS
       - FTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 500
     disable-udp: false
   - name: LB-2
     type: load-balance
@@ -287,7 +287,7 @@ proxy-groups:
       - FVLESS
       - FTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 500
     disable-udp: false
   - name: Route GAME
     type: url-test
@@ -340,43 +340,43 @@ proxy-groups:
       - LB-1
       - LB-2
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
   - name: FVMESS
     type: fallback
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
   - name: FVLESS
     type: fallback
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
   - name: FTROJAN
     type: fallback
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
   - name: FVMESS-G
     type: fallback
     use:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
   - name: FVLESS-G
     type: fallback
     use:
       - ACCVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
   - name: FTROJAN-G
     type: fallback
     use:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 3
+    interval: 5
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
