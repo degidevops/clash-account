@@ -273,9 +273,9 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:
-      - ACCTROJAN
-      - ACCVLESS
-      - ACCVMESS
+      - FVMESS
+      - FVLESS
+      - FTROJAN
     url: http://www.gstatic.com/generate_204
     interval: 300
     disable-udp: false
