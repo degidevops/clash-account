@@ -279,6 +279,16 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     disable-udp: false
+  - name: LB-2
+    type: load-balance
+    strategy: round-robin
+    use:
+      - FVMESS
+      - FVLESS
+      - FTROJAN
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    disable-udp: false
   - name: Route GAME
     type: url-test
     use:
@@ -294,7 +304,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - LB-1
+      - TrafficUmum
   - name: TrafficPortGames
     type: select
     proxies:
@@ -317,17 +327,18 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - LB-1
+      - TrafficUmum
   - name: TrafficPorn
     type: select
     proxies:
       - REJECT
-      - LB-1
+      - TrafficUmum
   - name: TrafficUmum
     type: fallback
     lazy: true
     proxies:
       - LB-1
+      - LB-2
     url: http://www.gstatic.com/generate_204
     interval: 15
   - name: FVMESS
