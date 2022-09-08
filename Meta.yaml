@@ -316,19 +316,19 @@ proxy-groups:
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
   - name: FVLESS
     type: fallback
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
   - name: FTROJAN
     type: fallback
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
   - name: FVMESS-G
     type: fallback
     use:
