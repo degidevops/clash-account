@@ -1,20 +1,20 @@
 proxies:
-  - name: G otunid-7/9
-    server: gw.ruangguru.com
+  - name: G otunsgprem
+    server: kelas.ruangguru.com
     port: 443
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: gw.ruangguru.com
+    servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://gw.ruangguru.com/u/opentunnel.net-msecureid
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecuresg
       headers:
-        Host: idx-1.openv2ray.com
+        Host: sgx-1.openv2ray.com
     #udp: true
-  - name: G otunid-7/9 byu
+  - name: G otunsgprem byu
     server: space.byu.id
     port: 443
     type: vless
@@ -25,7 +25,37 @@ proxies:
     servername: space.byu.id
     network: ws
     ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecureid
+      path: wss://space.byu.id/u/opentunnel.net-msecuresg
+      headers:
+        Host: sgx-1.openv2ray.com
+    #udp: true
+  - name: G otunidprem
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureidd
+      headers:
+        Host: idx-1.openv2ray.com
+    #udp: true
+  - name: G otunidprem byu
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/u/opentunnel.net-msecureidd
       headers:
         Host: idx-1.openv2ray.com
     #udp: true
