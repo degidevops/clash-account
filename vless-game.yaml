@@ -119,3 +119,33 @@ proxies:
       headers:
         Host: sgx-3.openv2ray.com
     #udp: true
+  - name: G jupisg
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: fda864f7-2baf-44d0-ae04-48e274679ab0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/xless/
+      headers:
+        Host: sg1.sjupiter.net
+    #udp: true
+  - name: G jupisg byu
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: fda864f7-2baf-44d0-ae04-48e274679ab0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/xless/
+      headers:
+        Host: sg1.sjupiter.net
+    #udp: true
