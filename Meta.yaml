@@ -273,9 +273,9 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:
-      - ACCTROJAN
-      - ACCVLESS
-      - ACCVMESS
+      - FTROJAN
+      - FVLESS
+      - FVMESS
     url: http://www.gstatic.com/generate_204
     interval: 300
     disable-udp: false
@@ -328,6 +328,24 @@ proxy-groups:
     lazy: true
     proxies:
       - LB-1
+    url: http://www.gstatic.com/generate_204
+    interval: 15
+  - name: FVMESS
+    type: fallback
+    proxies:
+      - ACCVMESS
+    url: http://www.gstatic.com/generate_204
+    interval: 15
+  - name: FVLESS
+    type: fallback
+    proxies:
+      - ACCVLESS
+    url: http://www.gstatic.com/generate_204
+    interval: 15
+  - name: FTROJAN
+    type: fallback
+    proxies:
+      - ACCTROJAN
     url: http://www.gstatic.com/generate_204
     interval: 15
 rules:
