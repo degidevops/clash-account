@@ -211,8 +211,8 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 15
-      timeout: 1
+      interval: 360
+      #timeout: 1
   ACCVLESS:
     type: http
     behavior: classical
@@ -222,8 +222,8 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 15
-      timeout: 1
+      interval: 360
+      #timeout: 1
   ACCTROJAN:
     type: http
     behavior: classical
@@ -233,8 +233,8 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 15
-      timeout: 1
+      interval: 360
+      #timeout: 1
   ACCTROJAN-G:
     type: http
     behavior: classical
@@ -244,8 +244,8 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 15
-      timeout: 1
+      interval: 360
+      #timeout: 1
   ACCVLESS-G:
     type: http
     behavior: classical
@@ -255,8 +255,8 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 15
-      timeout: 1
+      interval: 360
+      #timeout: 1
   ACCVMESS-G:
     type: http
     behavior: classical
@@ -266,8 +266,8 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 15
-      timeout: 1
+      interval: 360
+      #timeout: 1
 proxy-groups:
   - name: LB-1
     type: load-balance
@@ -298,7 +298,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
-    timeout: 1
+    #timeout: 1
     disable-udp: false
   - name: TrafficDirect
     type: select
