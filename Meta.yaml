@@ -273,7 +273,7 @@ proxy-groups:
     type: load-balance
     strategy: round-robin
     use:
-      - FTROJAN
+      #- FTROJAN
       - FVLESS
       - FVMESS
     url: http://www.gstatic.com/generate_204
