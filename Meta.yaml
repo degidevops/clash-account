@@ -272,7 +272,7 @@ proxy-groups:
   - name: LB-1
     type: load-balance
     strategy: round-robin
-    use:
+    proxies:
       - FVMESS
       - FVLESS
       - FTROJAN
@@ -282,7 +282,7 @@ proxy-groups:
   - name: LB-2
     type: load-balance
     strategy: round-robin
-    use:
+    proxies:
       - FVMESS
       - FVLESS
       - FTROJAN
