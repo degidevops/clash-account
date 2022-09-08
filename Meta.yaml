@@ -264,7 +264,7 @@ proxy-groups:
     proxies:
       - FTROJAN-G
       - FVLESS-G
-      - FVMESS-G
+      #- FVMESS-G
     url: http://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
@@ -310,7 +310,7 @@ proxy-groups:
       - LB-1
       - LB-2
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
   - name: FVMESS
     type: fallback
     use:
@@ -334,19 +334,19 @@ proxy-groups:
     use:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
   - name: FVLESS-G
     type: fallback
     use:
       - ACCVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
   - name: FTROJAN-G
     type: fallback
     use:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 15
+    interval: 5
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
