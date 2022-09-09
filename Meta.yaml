@@ -334,7 +334,8 @@ proxy-groups:
       - REJECT
       - TrafficUmum
   - name: TrafficUmum
-    type: select
+    type: load-balance
+    strategy: consistent-hashing
     proxies:
       - LB-1
       - LB-2
