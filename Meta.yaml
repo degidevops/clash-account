@@ -273,9 +273,9 @@ proxy-groups:
     type: load-balance
     strategy: consistent-hashing
     proxies:
-      - FVMESS
-      - FVLESS
-      - FTROJAN
+      - TVMESS
+      - TVLESS
+      - TTROJAN
     url: http://www.gstatic.com/generate_204
     interval: 1
     disable-udp: false
@@ -292,10 +292,9 @@ proxy-groups:
   - name: Route GAME
     type: url-test
     proxies:
-      - TACCGAME
-      - FTROJAN-G
-      - FVLESS-G
-      - FVMESS-G
+      - TTROJAN-G
+      - TVMESS-G
+      - TVLESS-G
     url: http://www.gstatic.com/generate_204
     interval: 1
     tolerance: 50
@@ -342,53 +341,48 @@ proxy-groups:
       - LB-2
     url: http://www.gstatic.com/generate_204
     interval: 1
-  - name: FVMESS
-    type: fallback
+  - name: TVMESS
+    type: url-test
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
     interval: 1
-  - name: FVLESS
-    type: fallback
+    tolerance: 50
+  - name: TVLESS
+    type: url-test
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
     interval: 1
-  - name: FTROJAN
-    type: fallback
+    tolerance: 50
+  - name: TTROJAN
+    type: url-test
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
     interval: 1
-  - name: FVMESS-G
-    type: fallback
-    use:
-      - ACCVMESS-G
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-  - name: FVLESS-G
-    type: fallback
-    use:
-      - ACCVLESS-G
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-  - name: FTROJAN-G
-    type: fallback
-    use:
-      - ACCTROJAN-G
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-  - name: TACCGAME
+    tolerance: 50
+  - name: TVMESS-G
     type: url-test
     use:
-      - ACCTROJAN-G
-      - ACCVLESS-G
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
     interval: 1
     tolerance: 50
-    #timeout: 1
-    disable-udp: false
+  - name: TVLESS-G
+    type: url-test
+    use:
+      - ACCVLESS-G
+    url: http://www.gstatic.com/generate_204
+    interval: 1
+    tolerance: 50
+  - name: TTROJAN-G
+    type: url-test
+    use:
+      - ACCTROJAN-G
+    url: http://www.gstatic.com/generate_204
+    interval: 1
+    tolerance: 50
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
