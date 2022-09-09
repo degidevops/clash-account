@@ -209,7 +209,7 @@ proxy-providers:
     path: "./proxy_provider/vmess.yaml"
     interval: 86400
     health-check:
-      enable: true
+      enable: false
       url: http://www.gstatic.com/generate_204
       interval: 240
       #timeout: 1
@@ -220,7 +220,7 @@ proxy-providers:
     path: "./proxy_provider/vless.yaml"
     interval: 86400
     health-check:
-      enable: true
+      enable: false
       url: http://www.gstatic.com/generate_204
       interval: 240
       #timeout: 1
@@ -231,7 +231,7 @@ proxy-providers:
     path: "./proxy_provider/trojan.yaml"
     interval: 86400
     health-check:
-      enable: true
+      enable: false
       url: http://www.gstatic.com/generate_204
       interval: 240
       #timeout: 1
@@ -242,7 +242,7 @@ proxy-providers:
     path: "./proxy_provider/trojan-game.yaml"
     interval: 86400
     health-check:
-      enable: true
+      enable: false
       url: http://www.gstatic.com/generate_204
       interval: 240
       #timeout: 1
@@ -253,7 +253,7 @@ proxy-providers:
     path: "./proxy_provider/vless-game.yaml"
     interval: 86400
     health-check:
-      enable: true
+      enable: false
       url: http://www.gstatic.com/generate_204
       interval: 240
       #timeout: 1
@@ -264,7 +264,7 @@ proxy-providers:
     path: "./proxy_provider/vmess-game.yaml"
     interval: 86400
     health-check:
-      enable: true
+      enable: false
       url: http://www.gstatic.com/generate_204
       interval: 240
       #timeout: 1
@@ -287,7 +287,7 @@ proxy-groups:
       - ACCVLESS
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     disable-udp: false
   - name: Route GAME
     type: url-test
@@ -366,21 +366,21 @@ proxy-groups:
     use:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     tolerance: 40
   - name: TVLESS-G
     type: url-test
     use:
       - ACCVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     tolerance: 40
   - name: TTROJAN-G
     type: url-test
     use:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     tolerance: 40
 rules:
   - DST-PORT,22,TrafficDirect
