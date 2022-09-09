@@ -211,7 +211,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 240
       #timeout: 1
   ACCVLESS:
     type: http
@@ -222,7 +222,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 240
       #timeout: 1
   ACCTROJAN:
     type: http
@@ -233,7 +233,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 240
       #timeout: 1
   ACCTROJAN-G:
     type: http
@@ -244,7 +244,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 240
       #timeout: 1
   ACCVLESS-G:
     type: http
@@ -255,7 +255,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 240
       #timeout: 1
   ACCVMESS-G:
     type: http
@@ -266,7 +266,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 180
+      interval: 240
       #timeout: 1
 proxy-groups:
   - name: LB-1
@@ -277,7 +277,7 @@ proxy-groups:
       - TVLESS
       - TTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 240
     disable-udp: false
   - name: LB-2
     type: load-balance
@@ -287,7 +287,7 @@ proxy-groups:
       - ACCVLESS
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 240
     disable-udp: false
   - name: Route GAME
     type: url-test
@@ -296,8 +296,8 @@ proxy-groups:
       - TVMESS-G
       - TVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
     #timeout: 1
     disable-udp: false
   - name: TrafficDirect
@@ -339,49 +339,49 @@ proxy-groups:
       - LB-1
       - LB-2
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 240
   - name: TVMESS
     type: url-test
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
   - name: TVLESS
     type: url-test
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
   - name: TTROJAN
     type: url-test
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
   - name: TVMESS-G
     type: url-test
     use:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
   - name: TVLESS-G
     type: url-test
     use:
       - ACCVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
   - name: TTROJAN-G
     type: url-test
     use:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 50
+    interval: 240
+    tolerance: 40
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
