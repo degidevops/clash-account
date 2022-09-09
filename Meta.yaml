@@ -276,12 +276,6 @@ proxy-groups:
       - FVMESS
       - FVLESS
       - FTROJAN
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-    disable-udp: false
-  - name: LB-2
-    type: load-balance
-    strategy: round-robin
     use:
       - ACCVMESS
       - ACCVLESS
@@ -296,9 +290,9 @@ proxy-groups:
       - FVLESS-G
       - FVMESS-G
     use:
-      - ACCTROJAN
-      - ACCVLESS
-      - ACCVMESS
+      - ACCTROJAN-G
+      - ACCVLESS-G
+      - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
     interval: 1
     tolerance: 50
@@ -338,11 +332,9 @@ proxy-groups:
       - REJECT
       - TrafficUmum
   - name: TrafficUmum
-    type: load-balance
-    strategy: round-robin
+    type: fallback
     proxies:
       - LB-1
-      - LB-2
     url: http://www.gstatic.com/generate_204
     interval: 1
   - name: FVMESS
