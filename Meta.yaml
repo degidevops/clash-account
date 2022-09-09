@@ -292,6 +292,7 @@ proxy-groups:
   - name: Route GAME
     type: url-test
     proxies:
+      - TACCGAME
       - FTROJAN-G
       - FVLESS-G
       - FVMESS-G
@@ -377,6 +378,17 @@ proxy-groups:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
     interval: 1
+  - name: TACCGAME
+    type: url-test
+    use:
+      - ACCTROJAN-G
+      - ACCVLESS-G
+      - ACCVMESS-G
+    url: http://www.gstatic.com/generate_204
+    interval: 1
+    tolerance: 50
+    #timeout: 1
+    disable-udp: false
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOIP,private,DIRECT,no-resolve
