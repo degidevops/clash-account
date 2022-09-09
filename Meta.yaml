@@ -334,7 +334,7 @@ proxy-groups:
       - REJECT
       - TrafficUmum
   - name: TrafficUmum
-    type: fallback
+    type: select
     proxies:
       - LB-1
       - LB-2
