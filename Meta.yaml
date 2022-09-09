@@ -271,7 +271,7 @@ proxy-providers:
 proxy-groups:
   - name: LB-1
     type: load-balance
-    strategy: round-robin
+    strategy: consistent-hashing
     proxies:
       - FVMESS
       - FVLESS
@@ -281,7 +281,7 @@ proxy-groups:
     disable-udp: false
   - name: LB-2
     type: load-balance
-    strategy: round-robin
+    strategy: consistent-hashing
     use:
       - ACCVMESS
       - ACCVLESS
