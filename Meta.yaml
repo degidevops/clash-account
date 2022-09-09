@@ -345,21 +345,21 @@ proxy-groups:
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     tolerance: 40
   - name: TVLESS
     type: url-test
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     tolerance: 40
   - name: TTROJAN
     type: url-test
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 240
+    interval: 1
     tolerance: 40
   - name: TVMESS-G
     type: url-test
