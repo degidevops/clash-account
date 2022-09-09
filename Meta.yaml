@@ -19,8 +19,8 @@ external-ui: "dashboard/dist"
 secret: ""
 interface-name: ""
 profile:
-  store-selected: true
-  store-fake-ip: true
+  store-selected: false
+  store-fake-ip: false
 sniffer:
   enable: false
   sniffing:
