@@ -289,6 +289,16 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 1
     disable-udp: false
+  - name: LB-MIX
+    type: load-balance
+    strategy: consistent-hashing
+    proxies:
+      - LB-BEST
+      - LB-ALL
+      - LB-MIX
+    url: http://www.gstatic.com/generate_204
+    interval: 1
+    disable-udp: false
   - name: Route GAME
     type: url-test
     proxies:
