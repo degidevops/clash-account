@@ -392,8 +392,7 @@ rules:
   - GEOSITE,category-porn,TrafficPorn
   - AND,(OR,((GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference))),(RULE-SET,rule_umum),TrafficUmum
   ##for ALL ports games
-  - AND,(OR,(NOT,((GEOSITE,rule-umum))),(NOT,((GEOSITE,rule-indo))),(NOT,((GEOIP,netflix))),(NOT,((GEOSITE,rule-streaming))),(NOT,((GEOSITE,rule-sosmed))),(NOT,((GEOIP,facebook))),(NOT,((GEOIP,twitter))),(NOT,((GEOIP,telegram))),(NOT,((GEOSITE,videoconference)))),(RULE-SET,rule_umum),TrafficPortGames
-  - NOT,((RULE-SET,rule_umum)),TrafficPortGames
+  - AND,(OR,(NOT,((GEOSITE,rule-umum))),(NOT,((GEOSITE,rule-indo))),(NOT,((GEOIP,netflix))),(NOT,((GEOSITE,rule-streaming))),(NOT,((GEOSITE,rule-sosmed))),(NOT,((GEOIP,facebook))),(NOT,((GEOIP,twitter))),(NOT,((GEOIP,telegram))),(NOT,((GEOSITE,videoconference)))),(OR,((RULE-SET,rule_umum),(NOT,((RULE-SET,rule_umum)))),TrafficPortGames
   - GEOSITE,rule-gaming,TrafficGaming
 rule-providers:
   rule_umum:
