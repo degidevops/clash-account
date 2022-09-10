@@ -390,14 +390,11 @@ rules:
   - GEOSITE,rule-ads,TrafficAds
   - GEOSITE,oisd-nsfw,TrafficPorn
   - GEOSITE,category-porn,TrafficPorn
-  - GEOSITE,rule-umum,TrafficUmum
+  - OR,((GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference),(RULE-SET,rule-umum)),TrafficUmum
   ##for ALL ports games
-  - AND,(RULE-SET,rule_umum),(NOT,((GEOSITE,rule-umum))),udp,TrafficPortGames
+  - AND,(NOT,((GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference))),(RULE-SET,rule_umum),TrafficPortGames
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - GEOSITE,rule-gaming,TrafficGaming
-  #Traffic Umum
-  - RULE-SET,rule_umum,TrafficUmum
-  #- MATCH,TrafficUmum
 rule-providers:
   rule_umum:
     type: http
