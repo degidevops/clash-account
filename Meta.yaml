@@ -15,7 +15,7 @@ mode: rule
 log-level: silent
 ipv6: false
 external-controller: 0.0.0.0:9090
-external-ui: "/sdcard/dashboard/dist"
+external-ui: "dashboard/dist"
 secret: ""
 interface-name: ""
 profile:
@@ -396,7 +396,7 @@ rules:
   - GEOSITE,rule-gaming,TrafficGaming
   #Traffic Umum
   - RULE-SET,rule_umum,TrafficUmum
-  - MATCH,TrafficUmum
+  #- MATCH,TrafficUmum
 rule-providers:
   rule_umum:
     type: http
