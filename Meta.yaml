@@ -390,7 +390,7 @@ rules:
   - GEOSITE,rule-ads,TrafficAds
   - GEOSITE,oisd-nsfw,TrafficPorn
   - GEOSITE,category-porn,TrafficPorn
-  - OR,((GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference),(RULE-SET,rule-umum)),TrafficUmum
+  - OR,((GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference),(RULE-SET,rule_umum)),TrafficUmum
   ##for ALL ports games
   - AND,(NOT,((GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference))),(RULE-SET,rule_umum),TrafficPortGames
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
