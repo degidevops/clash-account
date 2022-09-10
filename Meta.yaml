@@ -392,6 +392,7 @@ rules:
   - GEOSITE,category-porn,TrafficPorn
   - GEOSITE,rule-umum,TrafficUmum
   ##for ALL ports games
+  - OR,((NOT,((RULE-SET,rule_umum))),(RULE-SET,rule_umum,udp)),TrafficPortGames
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - GEOSITE,rule-gaming,TrafficGaming
   #Traffic Umum
