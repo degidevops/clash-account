@@ -400,16 +400,7 @@ rules:
   - GEOSITE,rule-ads,TrafficAds
   - GEOSITE,oisd-nsfw,TrafficPorn
   - GEOSITE,category-porn,TrafficPorn
-  - GEOSITE,rule-umum,TrafficUmum
-  - GEOSITE,rule-indo,TrafficUmum
-  - GEOIP,netflix,TrafficUmum
-  - GEOSITE,rule-streaming,TrafficUmum
-  - GEOSITE,rule-sosmed,TrafficUmum
-  - GEOIP,facebook,TrafficUmum
-  - GEOIP,twitter,TrafficUmum
-  - GEOIP,telegram,TrafficUmum
-  - GEOSITE,videoconference,TrafficUmum
-  - RULE-SET,rule_umum,TrafficUmum
+  - AND,(GEOSITE,rule-umum),(GEOSITE,rule-indo),(GEOIP,netflix),(GEOSITE,rule-streaming),(GEOSITE,rule-sosmed),(GEOIP,facebook),(GEOIP,twitter),(GEOIP,telegram),(GEOSITE,videoconference),(RULE-SET,rule_umum),TrafficUmum
   #- MATCH,TrafficUmum
   ##for ALL ports games
   - AND,(NOT,((GEOSITE,rule-umum))),(NOT,((GEOSITE,rule-indo))),(NOT,((GEOIP,netflix))),(NOT,((GEOSITE,rule-streaming))),(NOT,((GEOSITE,rule-sosmed))),(NOT,((GEOIP,facebook))),(NOT,((GEOIP,twitter))),(NOT,((GEOIP,telegram))),(NOT,((GEOSITE,videoconference))),(OR,((RULE-SET,rule_umum),(NOT,((RULE-SET,rule_umum))))),TrafficPortGames
