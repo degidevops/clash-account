@@ -394,14 +394,14 @@ proxy-groups:
     tolerance: 40
 rules:
   - DST-PORT,22,TrafficDirect
+  - GEOSITE,rule-malicious,REJECT
+  - GEOSITE,oisd-full,TrafficAds
+  - GEOSITE,rule-ads,TrafficAds
   - GEOIP,private,DIRECT,no-resolve
   - GEOIP,netflix,TrafficUmum
   - GEOIP,facebook,TrafficUmum
   - GEOIP,twitter,TrafficUmum
   - GEOIP,telegram,TrafficUmum
-  - GEOSITE,rule-malicious,REJECT
-  - GEOSITE,oisd-full,TrafficAds
-  - GEOSITE,rule-ads,TrafficAds
   - GEOSITE,oisd-nsfw,TrafficPorn
   - GEOSITE,category-porn,TrafficPorn
   - GEOSITE,rule-umum,TrafficUmum
@@ -409,9 +409,9 @@ rules:
   - GEOSITE,rule-streaming,TrafficUmum
   - GEOSITE,rule-sosmed,TrafficUmum
   - GEOSITE,videoconference,TrafficUmum
-  - GEOSITE,rule-gaming,TrafficGaming
-  - NOT,((RULE-SET,rule_umum)),TrafficPortGames
+  - GEOSITE,rule-gaming,
   - RULE-SET,rule_umum,TrafficUmum
+  - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - MATCH,TrafficUmum
 rule-providers:
   rule_umum:
