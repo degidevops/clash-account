@@ -412,7 +412,7 @@ rules:
   - GEOSITE,rule-gaming,TrafficGaming
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - RULE-SET,rule_umum,TrafficUmum
-  #- MATCH,TrafficUmum
+  - MATCH,TrafficUmum
 rule-providers:
   rule_umum:
     type: http
