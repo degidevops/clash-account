@@ -281,7 +281,7 @@ proxy-groups:
     disable-udp: false
   - name: LB-ALL
     type: load-balance
-    strategy: consistent-hashing
+    strategy: round-robin
     use:
       - ACCVMESS
       - ACCVLESS
@@ -291,7 +291,7 @@ proxy-groups:
     disable-udp: false
   - name: LB-MIX
     type: load-balance
-    strategy: consistent-hashing
+    strategy: round-robin
     proxies:
       - LB-BEST
       - LB-ALL
