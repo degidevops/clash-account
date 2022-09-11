@@ -398,21 +398,12 @@ rules:
   - GEOSITE,oisd-full,TrafficAds
   - GEOSITE,rule-ads,TrafficAds
   - GEOIP,private,DIRECT,no-resolve
-  - GEOIP,netflix,TrafficUmum
-  - GEOIP,facebook,TrafficUmum
-  - GEOIP,twitter,TrafficUmum
-  - GEOIP,telegram,TrafficUmum
   - GEOSITE,oisd-nsfw,TrafficPorn
   - GEOSITE,category-porn,TrafficPorn
-  - GEOSITE,rule-umum,TrafficUmum
-  - GEOSITE,rule-indo,TrafficUmum
-  - GEOSITE,rule-streaming,TrafficUmum
-  - GEOSITE,rule-sosmed,TrafficUmum
-  - GEOSITE,videoconference,TrafficUmum
   - GEOSITE,rule-gaming,TrafficGaming
   - RULE-SET,rule_umum,TrafficUmum
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
-  - MATCH,TrafficUmum
+  - MATCH,GLOBAL
 rule-providers:
   rule_umum:
     type: http
