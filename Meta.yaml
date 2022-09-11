@@ -409,7 +409,7 @@ rules:
   - GEOSITE,rule-streaming,TrafficUmum
   - GEOSITE,rule-sosmed,TrafficUmum
   - GEOSITE,videoconference,TrafficUmum
-  - GEOSITE,rule-gaming,
+  - GEOSITE,rule-gaming,TrafficGaming
   - RULE-SET,rule_umum,TrafficUmum
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - MATCH,TrafficUmum
