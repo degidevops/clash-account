@@ -71,14 +71,14 @@ dns:
   prefer-h3: true
   nameserver:
     - 1.1.1.1
-    - 8.8.8.8
-    - https://dns.cloudflare.com/dns-query
+    - 1.0.0.1
+    - tls://1.1.1.1:853
     - tls://8.8.8.8:853
   fallback:
     - 1.1.1.1
-    - 8.8.8.8
-    - https://dns.cloudflare.com/dns-query
+    - 1.0.0.1
     - tls://1.1.1.1:853
+    - tls://8.8.8.8:853
   fallback-filter:
     geoip: true
     geoip-code: ID
