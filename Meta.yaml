@@ -13,7 +13,7 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: silent
-ipv6: true
+ipv6: false
 external-controller: 0.0.0.0:9090
 external-ui: "dashboard/dist"
 secret: ""
@@ -92,7 +92,7 @@ dns:
       - "+.youtube.com"
       - "*.ruangguru.com"
       - "space.byu.id"
-  ipv6: true
+  ipv6: false
   fake-ip-filter:
     - "*.lan"
     - "*.localdomain"
@@ -211,7 +211,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1
+      interval: 5
       #timeout: 1
   ACCVLESS:
     type: http
@@ -222,7 +222,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1
+      interval: 5
       #timeout: 1
   ACCTROJAN:
     type: http
@@ -233,7 +233,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1
+      interval: 5
       #timeout: 1
   ACCTROJAN-G:
     type: http
@@ -244,7 +244,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1
+      interval: 5
       #timeout: 1
   ACCVLESS-G:
     type: http
@@ -255,7 +255,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1
+      interval: 5
       #timeout: 1
   ACCVMESS-G:
     type: http
@@ -266,7 +266,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 1
+      interval: 5
       #timeout: 1
 proxy-groups:
   - name: LB-BEST
@@ -403,7 +403,7 @@ rules:
   - GEOSITE,rule-gaming,TrafficGaming
   - NOT,((RULE-SET,rule_umum)),TrafficPortGames
   - RULE-SET,rule_umum,TrafficUmum
-  - MATCH,GLOBAL
+  #- MATCH,GLOBAL
 rule-providers:
   rule_umum:
     type: http
