@@ -8,7 +8,7 @@ geodata-loader: memconservative
 tcp-concurrent: true
 unified-delay: true
 enable-process: true
-inbound-tfo: true
+inbound-tfo: false
 allow-lan: true
 bind-address: "*"
 mode: rule
