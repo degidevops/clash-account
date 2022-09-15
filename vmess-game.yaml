@@ -1,5 +1,5 @@
 proxies:
-  - name: v2ray2.udpgw.com
+  - name: G v2ray2.udpgw.com
     server: gw.ruangguru.com
     port: 443
     type: vmess
@@ -15,7 +15,7 @@ proxies:
       headers:
         Host: v2ray2.udpgw.com
     #udp: true
-  - name: v2ray2.udpgw.com byu
+  - name: G v2ray2.udpgw.com byu
     server: space.byu.id
     port: 443
     type: vmess
@@ -31,7 +31,7 @@ proxies:
       headers:
         Host: v2ray2.udpgw.com
     #udp: true
-  - name: otunsg premi 11
+  - name: G otunsg premi 22
     server: kelas.ruangguru.com
     port: 443
     type: vmess
@@ -43,11 +43,11 @@ proxies:
     servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecure
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-mcssg
       headers:
         Host: sgv-5.openv2ray.com
     #udp: true
-  - name: otunsg premi 11 byu
+  - name: G otunsg premi 22 byu
     server: space.byu.id
     port: 443
     type: vmess
@@ -59,39 +59,39 @@ proxies:
     servername: space.byu.id
     network: ws
     ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecure
+      path: wss://space.byu.id/u/opentunnel.net-mcssg
       headers:
         Host: sgv-5.openv2ray.com
     #udp: true
-  - name: otunsg 14
+  - name: G jupisg 22
     server: kelas.ruangguru.com
     port: 443
     type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
+    uuid: 06457a2c-a72e-4445-96da-f93fc2e1ae78
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecuresgg
+      path: wss://kelas.ruangguru.com/v2ray
       headers:
-        Host: sgv-4.openv2ray.com
+        Host: sg1.jupiterv2ray.xyz
     #udp: true
-  - name: otunsg 14 byu
+  - name: G jupisg 22 byu
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
+    uuid: 06457a2c-a72e-4445-96da-f93fc2e1ae78
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: space.byu.id
     network: ws
     ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecuresgg
+      path: wss://space.byu.id/v2ray
       headers:
-        Host: sgv-4.openv2ray.com
+        Host: sg1.jupiterv2ray.xyz
     #udp: true
