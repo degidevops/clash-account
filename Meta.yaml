@@ -212,7 +212,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 90
+      interval: 30
       #timeout: 1
   ACCVLESS:
     type: http
@@ -223,7 +223,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 90
+      interval: 30
       #timeout: 1
   ACCTROJAN:
     type: http
@@ -234,7 +234,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 90
+      interval: 30
       #timeout: 1
   ACCTROJAN-G:
     type: http
@@ -245,7 +245,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 90
+      interval: 30
       #timeout: 1
   ACCVLESS-G:
     type: http
@@ -256,7 +256,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 90
+      interval: 30
       #timeout: 1
   ACCVMESS-G:
     type: http
@@ -267,7 +267,7 @@ proxy-providers:
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
-      interval: 90
+      interval: 30
       #timeout: 1
 proxy-groups:
   - name: F-BEST
@@ -293,7 +293,7 @@ proxy-groups:
     strategy: consistent-hashing
     proxies:
       - TVLESS
-      - TVLESS
+      - FVLESS
       - TTROJAN
       - FTROJAN
       - TVMESS
