@@ -28,4 +28,3 @@ proxies:
       path: wss://space.byu.id/u/opentunnel.net-msecureid
       headers:
         Host: idx-1.openv2ray.com
-    #udp: true
