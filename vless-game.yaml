@@ -28,3 +28,32 @@ proxies:
       path: wss://space.byu.id/u/opentunnel.net-msecureid
       headers:
         Host: idx-1.openv2ray.com
+  - name: G otunsgprem id 30
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureidprem
+      headers:
+        Host: idx-1.openv2ray.com
+    #udp: true
+  - name: G otunsgprem byu 30
+    server: space.byu.id
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/u/opentunnel.net-msecureidprem
+      headers:
+        Host: idx-1.openv2ray.com
