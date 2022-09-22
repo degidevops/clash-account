@@ -12,18 +12,18 @@ proxies:
       headers:
         Host: sg8-trojan.bonds.id
     #udp: true
-  - name: id ojan
+  - name: sg HE 30
     server: kelas.ruangguru.com
     port: 443
     type: trojan
-    password: 5b1d5970-2347-11ed-8847-1239d0255272
+    password: e6a07f00-3a96-11ed-9b7c-1239d0255272
     skip-cert-verify: true
     sni: kelas.ruangguru.com
     network: ws
     ws-opts:
       path: wss://kelas.ruangguru.com/howdy
       headers:
-        Host: idtj-ikd.bonds.id
+        Host: sg1-trojan.bonds.id
     #udp: true
   - name: sg ojan byu
     server: space.byu.id
@@ -38,16 +38,16 @@ proxies:
       headers:
         Host: sg8-trojan.bonds.id
     #udp: true
-  - name: id ojan byu
+  - name: sg HE byu 30
     server: space.byu.id
     port: 443
     type: trojan
-    password: 5b1d5970-2347-11ed-8847-1239d0255272
+    password: e6a07f00-3a96-11ed-9b7c-1239d0255272
     skip-cert-verify: true
     sni: space.byu.id
     network: ws
     ws-opts:
       path: wss://space.byu.id/howdy
       headers:
-        Host: idtj-ikd.bonds.id
+        Host: sg1-trojan.bonds.id
     #udp: true
