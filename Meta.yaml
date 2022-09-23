@@ -13,7 +13,7 @@ allow-lan: true
 bind-address: "*"
 mode: rule
 log-level: silent
-ipv6: false
+ipv6: true
 external-controller: 0.0.0.0:9090
 external-ui: "dashboard/dist"
 secret: ""
@@ -68,17 +68,17 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
-  prefer-h3: true
+  prefer-h3: false
   nameserver:
     - 1.1.1.1
     - 1.0.0.1
     - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
+    #- tls://8.8.8.8:853
   fallback:
     - 1.1.1.1
     - 1.0.0.1
     - tls://1.1.1.1:853
-    - tls://8.8.8.8:853
+    #- tls://8.8.8.8:853
   fallback-filter:
     geoip: true
     geoip-code: ID
@@ -92,7 +92,7 @@ dns:
       - "+.youtube.com"
       - "*.ruangguru.com"
       - "space.byu.id"
-  ipv6: false
+  ipv6: true
   fake-ip-filter:
     - "*.lan"
     - "*.localdomain"
@@ -201,7 +201,6 @@ geox-url:
   geoip: "https://github.com/malikshi/v2ray-rules-dat/raw/release/geoip.dat"
   geosite: "https://github.com/malikshi/v2ray-rules-dat/raw/release/geosite.dat"
 proxies:
-
 proxy-providers:
   ACCVMESS:
     type: http
@@ -277,7 +276,7 @@ proxy-groups:
       - TTROJAN
       - TVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
     disable-udp: false
   - name: F-FALLBACK
     type: fallback
@@ -286,17 +285,20 @@ proxy-groups:
       - FTROJAN
       - FVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
     disable-udp: false
   - name: LB
     type: load-balance
     strategy: consistent-hashing
     proxies:
+      - TVLESS
+      - TTROJAN
+      - TVMESS
       - FVLESS
       - FTROJAN
       - FVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
     disable-udp: false
   - name: Route GAME
     type: fallback
@@ -305,7 +307,8 @@ proxy-groups:
       - TVMESS-G
       - TTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 180
+    tolerance: 50
     #timeout: 1
     disable-udp: false
   - name: TrafficDirect
@@ -348,67 +351,67 @@ proxy-groups:
       - F-BEST
       - F-FALLBACK
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
   - name: FVMESS
     type: fallback
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
   - name: FVLESS
     type: fallback
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
   - name: FTROJAN
     type: fallback
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 1
+    interval: 60
   - name: TVMESS
     type: url-test
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 40
+    interval: 60
+    tolerance: 50
   - name: TVLESS
     type: url-test
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 40
+    interval: 60
+    tolerance: 50
   - name: TTROJAN
     type: url-test
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 40
+    interval: 60
+    tolerance: 50
   - name: TVMESS-G
     type: url-test
     use:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 40
+    interval: 60
+    tolerance: 50
   - name: TVLESS-G
     type: url-test
     use:
       - ACCVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 40
+    interval: 60
+    tolerance: 50
   - name: TTROJAN-G
     type: url-test
     use:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 1
-    tolerance: 40
+    interval: 60
+    tolerance: 50
 rules:
   - DST-PORT,22,TrafficDirect
   - GEOSITE,rule-malicious,REJECT
