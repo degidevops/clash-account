@@ -1,97 +1,17 @@
 proxies:
-  - name: G v2ray2.udpgw.com
-    server: gw.ruangguru.com
+  - name: G ACCOUNT
+    server: gw.ruangguru.co
     port: 443
     type: vmess
-    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
+    uuid: f66e68e0-c46d-4488-a7a0-68b8bce2420
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: gw.ruangguru.com
+    servername: gw.ruangguru.co
     network: ws
     ws-opts:
-      path: wss://gw.ruangguru.com/howdy
+      path: wss://gw.ruangguru.com/howd
       headers:
-        Host: v2ray2.udpgw.com
-    #udp: true
-  - name: G v2ray2.udpgw.com byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/howdy
-      headers:
-        Host: v2ray2.udpgw.com
-    #udp: true
-  - name: G otunsg premi 22
-    server: kelas.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-mcssg
-      headers:
-        Host: sgv-5.openv2ray.com
-    #udp: true
-  - name: G otunsg premi 22 byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-    alterId: 16
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-mcssg
-      headers:
-        Host: sgv-5.openv2ray.com
-    #udp: true
-  - name: G jupisg 22
-    server: kelas.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: 06457a2c-a72e-4445-96da-f93fc2e1ae78
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/v2ray
-      headers:
-        Host: sg1.jupiterv2ray.xyz
-    #udp: true
-  - name: G jupisg 22 byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: 06457a2c-a72e-4445-96da-f93fc2e1ae78
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/v2ray
-      headers:
-        Host: sg1.jupiterv2ray.xyz
+        Host: v2ray2.udpgw.co
     #udp: true
