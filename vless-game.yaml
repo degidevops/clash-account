@@ -10,7 +10,7 @@ proxies:
     servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureid
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureidprem2
       headers:
         Host: idx-1.openv2ray.com
     #udp: true
@@ -25,7 +25,7 @@ proxies:
     servername: space.byu.id
     network: ws
     ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecureid
+      path: wss://space.byu.id/u/opentunnel.net-msecureidprem2
       headers:
         Host: idx-1.openv2ray.com
   - name: G otunsgprem id 30
