@@ -5,7 +5,7 @@ redir-port: 7892
 tproxy-port: 9898
 geodata-mode: true
 geodata-loader: memconservative
-tcp-concurrent: false
+tcp-concurrent: true
 unified-delay: true
 enable-process: true
 inbound-tfo: false
@@ -258,7 +258,7 @@ proxy-groups:
       - TTROJAN
       - TVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     disable-udp: false
   - name: F-FALLBACK
     type: fallback
@@ -267,7 +267,7 @@ proxy-groups:
       - FTROJAN
       - FVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     disable-udp: false
   - name: LB
     type: load-balance
@@ -280,7 +280,7 @@ proxy-groups:
       - FTROJAN
       - FVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     disable-udp: false
   - name: Route GAME
     type: fallback
@@ -289,7 +289,7 @@ proxy-groups:
       - TVMESS-G
       - TTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 180
+    interval: 1
     tolerance: 50
     #timeout: 1
     disable-udp: false
@@ -333,66 +333,66 @@ proxy-groups:
       - F-BEST
       - F-FALLBACK
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
   - name: FVMESS
     type: fallback
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
   - name: FVLESS
     type: fallback
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
   - name: FTROJAN
     type: fallback
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
   - name: TVMESS
     type: url-test
     use:
       - ACCVMESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     tolerance: 50
   - name: TVLESS
     type: url-test
     use:
       - ACCVLESS
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     tolerance: 50
   - name: TTROJAN
     type: url-test
     use:
       - ACCTROJAN
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     tolerance: 50
   - name: TVMESS-G
     type: url-test
     use:
       - ACCVMESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     tolerance: 50
   - name: TVLESS-G
     type: url-test
     use:
       - ACCVLESS-G
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     tolerance: 50
   - name: TTROJAN-G
     type: url-test
     use:
       - ACCTROJAN-G
     url: http://www.gstatic.com/generate_204
-    interval: 60
+    interval: 1
     tolerance: 50
 rules:
   - DST-PORT,22,TrafficDirect
