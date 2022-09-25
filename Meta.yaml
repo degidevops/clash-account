@@ -50,25 +50,33 @@ dns:
   device: Meta
   listen: 0.0.0.0:1053
   default-nameserver:
-    - 1.1.1.1
     - 1.0.0.1
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
-  prefer-h3: false
+  prefer-h3: true
   nameserver:
-    - 1.1.1.1
-    - https://dns64.cloudflare-dns.com/dns-query
     - 1.0.0.1
+    - 1.1.1.1
+    - https://1dot1dot1dot1.cloudflare-dns.com/dns-query
+    - 8.8.8.8
+    - 8.8.4.4
+    - https://dns.google/dns-query
   fallback:
-    - 1.1.1.1
-    - https://dns64.cloudflare-dns.com/dns-query
     - 1.0.0.1
+    - 1.1.1.1
+    - https://1dot1dot1dot1.cloudflare-dns.com/dns-query
+    - 8.8.8.8
+    - 8.8.4.4
+    - https://dns.google/dns-query
   fallback-filter:
-    geoip: true
+    geoip: false
     geoip-code: ID
     geosite:
-      - rule-indo
+      #- rule-indo
     ipcidr:
       - 240.0.0.0/4
     domain:
@@ -254,31 +262,21 @@ proxy-providers:
       interval: 15
       #timeout: 1
 proxy-groups:
-  - name: F-BEST
-    type: fallback
-    proxies:
-      - TVLESS
-      - TTROJAN
-      - TVMESS
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-    disable-udp: false
-  - name: F-FALLBACK
-    type: fallback
+  - name: BEST
+    type: url-test
+    lazy: true
     proxies:
       - FVLESS
       - FTROJAN
       - FVMESS
     url: http://www.gstatic.com/generate_204
     interval: 1
+    tolerance: 50
     disable-udp: false
   - name: LB
     type: load-balance
     strategy: consistent-hashing
     proxies:
-      - TVLESS
-      - TTROJAN
-      - TVMESS
       - FVLESS
       - FTROJAN
       - FVMESS
@@ -330,29 +328,43 @@ proxy-groups:
       - REJECT
       - TrafficUmum
   - name: TrafficUmum
-    type: select
+    type: fallback
     proxies:
       - LB
-      - F-BEST
-      - F-FALLBACK
+      - BEST
     url: http://www.gstatic.com/generate_204
     interval: 1
   - name: FVMESS
     type: fallback
-    use:
-      - ACCVMESS
+    lazy: true
+    proxies:
+      - TVMESS
+      - TVMESS
+      - TVMESS
+      - TVMESS
+      - TVMESS
     url: http://www.gstatic.com/generate_204
     interval: 1
   - name: FVLESS
     type: fallback
-    use:
-      - ACCVLESS
+    lazy: true
+    proxies:
+      - TVLESS
+      - TVLESS
+      - TVLESS
+      - TVLESS
+      - TVLESS
     url: http://www.gstatic.com/generate_204
     interval: 1
   - name: FTROJAN
     type: fallback
-    use:
-      - ACCTROJAN
+    lazy: true
+    proxies:
+      - TTROJAN
+      - TTROJAN
+      - TTROJAN
+      - TTROJAN
+      - TTROJAN
     url: http://www.gstatic.com/generate_204
     interval: 1
   - name: TVMESS
