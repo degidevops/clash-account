@@ -50,15 +50,18 @@ dns:
   device: Meta
   listen: 0.0.0.0:1053
   default-nameserver:
+    - 1.1.1.1
     - 1.0.0.1
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   prefer-h3: false
   nameserver:
+    - 1.1.1.1
     - https://dns64.cloudflare-dns.com/dns-query
     - 1.0.0.1
   fallback:
+    - 1.1.1.1
     - https://dns64.cloudflare-dns.com/dns-query
     - 1.0.0.1
   fallback-filter:
