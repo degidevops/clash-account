@@ -47,7 +47,7 @@ proxies:
       headers:
         Host: nginx-sg-185.iptunnels.com
     #udp: true
-  - name: otunsg premi 22 byu
+  - name: o0iptunnel byu
     server: space.byu.id
     port: 443
     type: vmess
@@ -62,4 +62,36 @@ proxies:
       path: wss://space.byu.id/buy-vmess-ws-pm-telegram-at-synricha
       headers:
         Host: nginx-sg-185.iptunnels.com
+    #udp: true
+  - name: fssh
+    server: kelas.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: bb4b9e95-c9ff-411c-9a47-483570e169aa
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/fastssh/msecure/632c7886ded63/
+      headers:
+        Host: sg1.31vpn.com
+    #udp: true
+  - name: fssh byu
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: bb4b9e95-c9ff-411c-9a47-483570e169aa
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/fastssh/msecure/632c7886ded63/
+      headers:
+        Host: sg1.31vpn.com
     #udp: true
