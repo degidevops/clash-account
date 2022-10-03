@@ -1,25 +1,25 @@
 proxies:
   - name: v2ray2.udpgw.com
-    server: gw.ruangguru.com
+    server: kelas.ruangguru.com
     port: 443
     type: vmess
-    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
+    uuid: 2943f1b6-ee03-42ec-82e8-81b83ad95088
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: gw.ruangguru.com
+    servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://gw.ruangguru.com/howdy
+      path: wss://kelas.ruangguru.com/howdy
       headers:
-        Host: v2ray2.udpgw.com
+        Host: v2ray3.udpgw.com
     #udp: true
   - name: v2ray2.udpgw.com byu
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: f66e68e0-c46d-4488-a7a0-68b8bce24208
+    uuid: 2943f1b6-ee03-42ec-82e8-81b83ad95088
     alterId: 0
     cipher: auto
     tls: true
@@ -29,69 +29,5 @@ proxies:
     ws-opts:
       path: wss://space.byu.id/howdy
       headers:
-        Host: v2ray2.udpgw.com
-    #udp: true
-  - name: iptunnel
-    server: kelas.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: 85899617-278b-4919-b34f-14808e0efc32
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/buy-vmess-ws-pm-telegram-at-synricha
-      headers:
-        Host: nginx-sg-185.iptunnels.com
-    #udp: true
-  - name: o0iptunnel byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: 85899617-278b-4919-b34f-14808e0efc32
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/buy-vmess-ws-pm-telegram-at-synricha
-      headers:
-        Host: nginx-sg-185.iptunnels.com
-    #udp: true
-  - name: fssh
-    server: kelas.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: bb4b9e95-c9ff-411c-9a47-483570e169aa
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/fastssh/msecure/632c7886ded63/
-      headers:
-        Host: sg1.31vpn.com
-    #udp: true
-  - name: fssh byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: bb4b9e95-c9ff-411c-9a47-483570e169aa
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/fastssh/msecure/632c7886ded63/
-      headers:
-        Host: sg1.31vpn.com
+        Host: v2ray3.udpgw.com
     #udp: true
