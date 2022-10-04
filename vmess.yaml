@@ -31,3 +31,35 @@ proxies:
       headers:
         Host: v2ray3.udpgw.com
     #udp: true
+  - name: why sg 11
+    server: kelas.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: dd9a0a3f-14b5-4ee1-ac38-93eb937e6087
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/vmess/
+      headers:
+        Host: do1.kitu.xyz
+    #udp: true
+  - name: why sg byu 11
+    server: space.byu.id
+    port: 443
+    type: vmess
+    uuid: dd9a0a3f-14b5-4ee1-ac38-93eb937e6087
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/vmess/
+      headers:
+        Host: do1.kitu.xyz
+    #udp: true
