@@ -77,3 +77,29 @@ proxies:
       headers:
         Host: sg6-trojan.bonds.id
     #udp: true
+  - name: sgd ojan
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: whyvpn-msecuresgojan
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/trojan-go
+      headers:
+        Host: do1.kitu.xyz
+    #udp: true
+  - name: sgd ojan byu
+    server: space.byu.id
+    port: 443
+    type: trojan
+    password: whyvpn-msecuresgojan
+    skip-cert-verify: true
+    sni: space.byu.id
+    network: ws
+    ws-opts:
+      path: wss://space.byu.id/trojan-go
+      headers:
+        Host: do1.kitu.xyz
+    #udp: true
