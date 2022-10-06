@@ -1,9 +1,9 @@
 proxies:
-  - name: v2ray2.udpgw.com
+  - name: v2ray1.udpgw.com
     server: kelas.ruangguru.com
     port: 443
     type: vmess
-    uuid: 2943f1b6-ee03-42ec-82e8-81b83ad95088
+    uuid: d4d8fb83-71d9-49a4-ae1e-7c49e9a069c4
     alterId: 0
     cipher: auto
     tls: true
@@ -13,13 +13,13 @@ proxies:
     ws-opts:
       path: wss://kelas.ruangguru.com/howdy
       headers:
-        Host: v2ray3.udpgw.com
+        Host: v2ray1.udpgw.com
     #udp: true
-  - name: v2ray2.udpgw.com byu
+  - name: v2ray1.udpgw.com byu
     server: space.byu.id
     port: 443
     type: vmess
-    uuid: 2943f1b6-ee03-42ec-82e8-81b83ad95088
+    uuid: d4d8fb83-71d9-49a4-ae1e-7c49e9a069c4
     alterId: 0
     cipher: auto
     tls: true
@@ -29,7 +29,7 @@ proxies:
     ws-opts:
       path: wss://space.byu.id/howdy
       headers:
-        Host: v2ray3.udpgw.com
+        Host: v2ray1.udpgw.com
     #udp: true
   - name: why sg 11
     server: kelas.ruangguru.com
