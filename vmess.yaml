@@ -153,3 +153,19 @@ proxies:
       path: wss://kelas.ruangguru.com/
       headers: {Host: 13.73.229.250}
     udp: true
+  - name: sg2.31vpn.com
+    server: kelas.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: fbf78c1f-6f42-45e0-a1a9-67de703b90f8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/fastssh/msecure/63400e73bff39/
+      headers: 
+        Host: kelas.ruangguru.com
+    udp: true
