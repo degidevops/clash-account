@@ -19,7 +19,7 @@ external-ui: "dashboard/dist"
 secret: ""
 interface-name: ""
 profile:
-  store-selected: true
+  store-selected: false
   store-fake-ip: false
 sniffer:
   enable: false
@@ -263,12 +263,11 @@ proxy-providers:
       #timeout: 1
 proxy-groups:
   - name: BEST
-    type: url-test
-    lazy: true
+    type: fallback
     proxies:
-      - FVLESS
-      - FTROJAN
-      - FVMESS
+      - TVLESS
+      - TTROJAN
+      - TVMESS
     url: http://www.gstatic.com/generate_204
     interval: 1
     tolerance: 50
@@ -277,9 +276,9 @@ proxy-groups:
     type: load-balance
     strategy: consistent-hashing
     proxies:
-      - FVLESS
-      - FTROJAN
-      - FVMESS
+      - TVLESS
+      - TTROJAN
+      - TVMESS
     url: http://www.gstatic.com/generate_204
     interval: 1
     disable-udp: false
@@ -332,39 +331,6 @@ proxy-groups:
     proxies:
       - LB
       - BEST
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-  - name: FVMESS
-    type: fallback
-    lazy: true
-    proxies:
-      - TVMESS
-      - TVMESS
-      - TVMESS
-      - TVMESS
-      - TVMESS
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-  - name: FVLESS
-    type: fallback
-    lazy: true
-    proxies:
-      - TVLESS
-      - TVLESS
-      - TVLESS
-      - TVLESS
-      - TVLESS
-    url: http://www.gstatic.com/generate_204
-    interval: 1
-  - name: FTROJAN
-    type: fallback
-    lazy: true
-    proxies:
-      - TTROJAN
-      - TTROJAN
-      - TTROJAN
-      - TTROJAN
-      - TTROJAN
     url: http://www.gstatic.com/generate_204
     interval: 1
   - name: TVMESS
