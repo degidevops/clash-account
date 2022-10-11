@@ -1,67 +1,9 @@
 proxies:
-  - name: otunsgprem id 
+  - name: whyvpn-msecurewhysg
     server: kelas.ruangguru.com
     port: 443
     type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureidprem2
-      headers:
-        Host: idx-1.openv2ray.com
-    #udp: true
-  - name: otunsgprem byu
-    server: space.byu.id
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecureidprem2
-      headers:
-        Host: idx-1.openv2ray.com
-  - name: otunsgprem id 30
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureidprem
-      headers:
-        Host: idx-1.openv2ray.com
-    #udp: true
-  - name: otunsgprem byu 30
-    server: space.byu.id
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/u/opentunnel.net-msecureidprem
-      headers:
-        Host: idx-1.openv2ray.com
-  - name: G whyid 30
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 57ad78a7-d7b6-4a5b-bb4f-25c5f6951eea
+    uuid: c1927bc9-6519-4f2c-967e-ba564bcd16ad
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -70,19 +12,5 @@ proxies:
     ws-opts:
       path: wss://kelas.ruangguru.com/xvless/
       headers:
-        Host: dewabiz2.kitu.xyz
-    #udp: true
-  - name: G whyid byu 30
-    server: space.byu.id
-    port: 443
-    type: vless
-    uuid: 57ad78a7-d7b6-4a5b-bb4f-25c5f6951eea
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/xvless/
-      headers:
-        Host: dewabiz2.kitu.xyz
+        Host: do1.kitu.xyz
+    udp: true
