@@ -103,3 +103,16 @@ proxies:
       headers:
         Host: do1.kitu.xyz
     #udp: true
+  - name: SG Trojan Dual Stack
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: d2b8f310-4993-11ed-a2bb-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/howdy
+      headers:
+        Host: sg-atha.bonds.id
+    udp: true
