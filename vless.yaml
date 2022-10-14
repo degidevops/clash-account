@@ -1,9 +1,24 @@
 proxies:
-  - name: whyvpn-msecurewhysg
+  - name: whyvpn-msecurewhysg xl
     server: kelas.ruangguru.com
     port: 443
     type: vless
     uuid: c1927bc9-6519-4f2c-967e-ba564bcd16ad
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/xvless/
+      headers:
+        Host: do1.kitu.xyz
+    udp: true
+  - name: whyvpn-msecurepremsg2 xl
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 1115ae66-7f4d-4096-8460-0ec6b7e684ce
     cipher: auto
     tls: true
     skip-cert-verify: true
