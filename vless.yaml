@@ -29,3 +29,33 @@ proxies:
       headers:
         Host: do1.kitu.xyz
     udp: true
+  - name: otunx3
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecuresg
+      headers:
+        Host: sgx-3.openv2ray.com
+    udp: true
+  - name: whydo2
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 5deada6c-1611-4f92-81b3-03caa805ca42
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/xvless/
+      headers:
+        Host: do2.kitu.xyz
+    udp: true
