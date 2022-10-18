@@ -1,56 +1,4 @@
 proxies:
-  - name: sg ojan
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: 25ec6670-2347-11ed-8afa-1239d0255272
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/howdy
-      headers:
-        Host: sg8-trojan.bonds.id
-    #udp: true
-  - name: sg HE 30
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: e6a07f00-3a96-11ed-9b7c-1239d0255272
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/howdy
-      headers:
-        Host: sg1-trojan.bonds.id
-    #udp: true
-  - name: sg ojan byu
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: 25ec6670-2347-11ed-8afa-1239d0255272
-    skip-cert-verify: true
-    sni: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/howdy
-      headers:
-        Host: sg8-trojan.bonds.id
-    #udp: true
-  - name: sg HE byu 30
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: e6a07f00-3a96-11ed-9b7c-1239d0255272
-    skip-cert-verify: true
-    sni: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/howdy
-      headers:
-        Host: sg1-trojan.bonds.id
-    #udp: true
   - name: sg ojan he mux
     server: kelas.ruangguru.com
     port: 443
@@ -63,45 +11,6 @@ proxies:
       path: wss://kelas.ruangguru.com/howdy
       headers:
         Host: sg6-trojan.bonds.id
-    #udp: true
-  - name: sg ojan he mux byu
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: 55660d80-4175-11ed-b3f9-1239d0255272
-    skip-cert-verify: true
-    sni: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/howdy
-      headers:
-        Host: sg6-trojan.bonds.id
-    #udp: true
-  - name: sgd ojan
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: whyvpn-msecuresgojan
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/trojan-go
-      headers:
-        Host: do1.kitu.xyz
-    #udp: true
-  - name: sgd ojan byu
-    server: space.byu.id
-    port: 443
-    type: trojan
-    password: whyvpn-msecuresgojan
-    skip-cert-verify: true
-    sni: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/trojan-go
-      headers:
-        Host: do1.kitu.xyz
     #udp: true
   - name: SG Trojan Dual Stack
     server: kelas.ruangguru.com
@@ -121,6 +30,32 @@ proxies:
     port: 443
     type: trojan
     password: 3c2e7350-4bd1-11ed-a14c-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/howdy
+      headers:
+        Host: sg1-trojan.bonds.id
+    udp: true
+  - name: ojan weekly
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: 6d358930-4d68-11ed-b3fb-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/howdy
+      headers:
+        Host: trojan2.udpgw.com
+    udp: true
+  - name: SG-HE 1 Trojan VPN
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: a90a0e60-4d68-11ed-847f-1239d0255272
     skip-cert-verify: true
     sni: kelas.ruangguru.com
     network: ws
