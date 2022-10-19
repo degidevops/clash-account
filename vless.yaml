@@ -63,14 +63,14 @@ proxies:
     server: kelas.ruangguru.com
     port: 443
     type: vless
-    uuid: 7f01f86c-2280-4ede-a17d-67acae66e48c
+    uuid: d7d44912-8408-4d8d-98d7-2e0f2766d29a
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://kelas.ruangguru.com/msecurews
+      path: wss://kelas.ruangguru.com//vlessws?ed=2048
       headers:
         Host: sgdo.degidevops.eu.org
     udp: true
