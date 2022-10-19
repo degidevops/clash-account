@@ -59,3 +59,18 @@ proxies:
       headers:
         Host: do2.kitu.xyz
     udp: true
+  - name: sgdo.degidevops.eu.org_VLESS_WS
+    server: kelas.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 7f01f86c-2280-4ede-a17d-67acae66e48c
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: /msecurews?ed=2048
+      headers:
+        Host: sgdo.degidevops.eu.org
+    udp: true
