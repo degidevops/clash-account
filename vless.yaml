@@ -70,7 +70,7 @@ proxies:
     servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://kelas.ruangguru.com/msecurews?ed=2048
+      path: wss://kelas.ruangguru.com/msecurews
       headers:
         Host: sgdo.degidevops.eu.org
     udp: true
