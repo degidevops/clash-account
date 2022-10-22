@@ -376,7 +376,7 @@ proxy-groups:
     interval: 1
     tolerance: 50
 rules:
-  - DST-PORT,22,TrafficDirect
+  #- DST-PORT,22,TrafficDirect
   - GEOSITE,rule-malicious,REJECT
   - GEOSITE,oisd-full,TrafficAds
   - GEOSITE,rule-ads,TrafficAds
