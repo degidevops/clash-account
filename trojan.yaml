@@ -64,7 +64,7 @@ proxies:
       headers:
         Host: sg1-trojan.bonds.id
     udp: true
-  - name: private
+  - name: private ojan
     server: kelas.ruangguru.com
     port: 443
     type: trojan
