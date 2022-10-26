@@ -73,7 +73,7 @@ proxies:
     sni: kelas.ruangguru.com
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/dvps
+      path: wss://kelas.ruangguru.com/msecure
       headers: 
         Host: trojan.degidevops.eu.org
     udp: true
