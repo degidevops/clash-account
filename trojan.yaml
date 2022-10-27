@@ -77,3 +77,15 @@ proxies:
       headers: 
         Host: dosvr.degidevops.eu.org
     udp: true
+  - name: SG-ovh 1 Trojan VPN
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: b2e66be0-55d3-11ed-88f4-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: wss://kelas.ruangguru.com/howdy
+      headers:
+        Host: sgovh-trojan.bonds.id
