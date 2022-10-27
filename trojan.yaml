@@ -68,12 +68,12 @@ proxies:
     server: kelas.ruangguru.com
     port: 443
     type: trojan
-    password: kazumahama
+    password: msecure
     skip-cert-verify: true
     sni: kelas.ruangguru.com
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/msecure
+      path: wss://kelas.ruangguru.com/trojan
       headers: 
-        Host: trojan.degidevops.eu.org
+        Host: dosvr.degidevops.eu.org
     udp: true
