@@ -1,76 +1,16 @@
 proxies:
-  - name: whyvpn-msecurewhysg xl
-    server: kelas.ruangguru.com
-    port: 443
+  - name: gajalan
+    server: null
+    port: null
     type: vless
-    uuid: c1927bc9-6519-4f2c-967e-ba564bcd16ad
+    uuid: null
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: kelas.ruangguru.com
+    servername: null
     network: ws
     ws-opts:
       path: wss://kelas.ruangguru.com/xvless/
       headers:
-        Host: do1.kitu.xyz
-    udp: true
-  - name: whyvpn-msecurepremsg2 xl
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 1115ae66-7f4d-4096-8460-0ec6b7e684ce
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/xvless/
-      headers:
-        Host: do1.kitu.xyz
-    udp: true
-  - name: otunx3
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecuresg
-      headers:
-        Host: sgx-3.openv2ray.com
-    udp: true
-  - name: whydo2
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 5deada6c-1611-4f92-81b3-03caa805ca42
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/xvless/
-      headers:
-        Host: do2.kitu.xyz
-    udp: true
-  - name: private
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 00ca4736-12f9-4fc7-cbce-39c4ddf68e36
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/msecure
-      headers:
-        Host: sgdo.degidevops.eu.org
+        Host: null
     udp: true
