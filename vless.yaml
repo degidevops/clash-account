@@ -1,16 +1,16 @@
 proxies:
-  - name: gajalan
-    server: null
-    port: null
+  - name: whyvpn sg
+    server: kelas.ruangguru.com
+    port: 443
     type: vless
-    uuid: null
+    uuid: e36660c8-d2ef-44cd-a4d4-af0e6c886061
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: null
+    servername: kelas.ruangguru.com
     network: ws
-    ws-opts:
+    ws-opts: 
       path: wss://kelas.ruangguru.com/xvless/
-      headers:
-        Host: null
+      headers: 
+        Host: do1.kitu.xyz
     udp: true
