@@ -24,3 +24,16 @@ proxies:
       path: wss://kelas.ruangguru.com/howdy
       headers:
         Host: sgovh-trojan.bonds.id
+  - name: SG-DO why
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: whyvpn-msecuresg
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/trojan-go
+      headers: 
+        Host: do4.kitu.xyz
+    udp: true
