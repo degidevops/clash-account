@@ -1,27 +1,14 @@
 proxies:
-  - name: G ID-IKD Trojan VPN
-    server: kelas.ruangguru.com
+  - name: G ID HERZA
+    server: 104.18.2.2
     port: 443
     type: trojan
-    password: 6f588dc0-4bd1-11ed-b3bf-1239d0255272
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/howdy
-      headers:
-        Host: idtj-ikd.bonds.id
-    udp: true
-  - name: G private
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: 6b45439c0c
+    password: df9f9540-62f2-11ed-9437-1239d0255272
     skip-cert-verify: true
     sni: kelas.ruangguru.com
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/f38c40ff
+      path: wss://kelas.ruangguru.com/howdy
       headers: 
-        Host: trojan.degidevops.eu.org
+        Host: idtj-herza.bonds.id
     udp: true
