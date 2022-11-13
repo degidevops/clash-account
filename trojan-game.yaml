@@ -1,6 +1,6 @@
 proxies:
   - name: G ID HERZA
-    server: 104.18.2.2
+    server: kelas.ruangguru.com
     port: 443
     type: trojan
     password: df9f9540-62f2-11ed-9437-1239d0255272
