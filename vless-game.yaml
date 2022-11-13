@@ -1,31 +1,16 @@
 proxies:
-  - name: G opentunnel.net-msecureidprem
+  - name: G whyvpn-msecuree
     server: kelas.ruangguru.com
     port: 443
     type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    uuid: 90981bf0-bc99-411f-bc74-5d6bbdce211c
     cipher: auto
     tls: true
     skip-cert-verify: true
     servername: kelas.ruangguru.com
     network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecureidprem
-      headers:
-        Host: idx-1.openv2ray.com
-    udp: true
-  - name: G opentunnel.net-msecure1d
-    server: kelas.ruangguru.com
-    port: 443
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/u/opentunnel.net-msecure1d
-      headers:
-        Host: idx-1.openv2ray.com
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/xvless/
+      headers: 
+        Host: id1.kitu.xyz
     udp: true
