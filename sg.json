@@ -1,0 +1,21 @@
+[
+  {
+    "tag": "🍀 - G ID HERZA",
+    "type": "trojan",
+    "server": "104.18.2.2",
+    "server_port": 443,
+    "password": "df9f9540-62f2-11ed-9437-1239d0255272",
+    "tls": {
+      "enabled": true,
+      "insecure": true,
+      "server_name": "kelas.ruangguru.com"
+    },
+    "transport": {
+      "type": "ws",
+      "path": "wss://kelas.ruangguru.com/howdy",
+      "headers": {
+        "Host": "idtj-herza.bonds.id"
+      }
+    }
+  }
+]
