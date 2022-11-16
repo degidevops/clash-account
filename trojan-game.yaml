@@ -12,3 +12,16 @@ proxies:
       headers: 
         Host: idtj-herza.bonds.id
     udp: true
+  - name: G IKD
+    server: 104.18.3.2
+    port: 443
+    type: trojan
+    password: 5c9913c0-649d-11ed-8dfa-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/howdy
+      headers: 
+        Host: idtj-ikd.bonds.id
+    udp: true
