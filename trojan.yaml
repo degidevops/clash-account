@@ -1,29 +1,17 @@
 proxies:
-  - name: SG-HE 1 Trojan VPN
+  - name: SG DO why3
     server: kelas.ruangguru.com
     port: 443
     type: trojan
-    password: a90a0e60-4d68-11ed-847f-1239d0255272
+    password: whyvpn-msecuresg
     skip-cert-verify: true
     sni: kelas.ruangguru.com
     network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/howdy
-      headers:
-        Host: sg1-trojan.bonds.id
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/trojan-go
+      headers: 
+        Host: do3.kitu.xyz
     udp: true
-  - name: SG-ovh 1 Trojan VPN
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: b2e66be0-55d3-11ed-88f4-1239d0255272
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/howdy
-      headers:
-        Host: sgovh-trojan.bonds.id
   - name: SG-DO why
     server: kelas.ruangguru.com
     port: 443
