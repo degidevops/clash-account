@@ -25,3 +25,16 @@ proxies:
       headers: 
         Host: do4.kitu.xyz
     udp: true
+  - name: SG HE HOWDY
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: 78aaa060-6a3d-11ed-9cc0-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/howdy
+      headers: 
+        Host: sg2-trojan.bonds.id
+    udp: true
