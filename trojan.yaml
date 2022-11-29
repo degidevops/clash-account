@@ -38,3 +38,16 @@ proxies:
       headers: 
         Host: sg2-trojan.bonds.id
     udp: true
+  - name: SG OVH
+    server: 104.18.2.2
+    port: 443
+    type: trojan
+    password: 3df6d080-6f2e-11ed-9fca-1239d0255272
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/howdy
+      headers: 
+        Host: sgovh-trojan.bonds.id
+    udp: true
