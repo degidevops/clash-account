@@ -1,43 +1,4 @@
 proxies:
-  - name: SG DO why3
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: whyvpn-msecuresg
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts: 
-      path: wss://kelas.ruangguru.com/trojan-go
-      headers: 
-        Host: do3.kitu.xyz
-    udp: true
-  - name: SG-DO why
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: whyvpn-msecuresg
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts: 
-      path: wss://kelas.ruangguru.com/trojan-go
-      headers: 
-        Host: do4.kitu.xyz
-    udp: true
-  - name: SG HE HOWDY
-    server: kelas.ruangguru.com
-    port: 443
-    type: trojan
-    password: 78aaa060-6a3d-11ed-9cc0-1239d0255272
-    skip-cert-verify: true
-    sni: kelas.ruangguru.com
-    network: ws
-    ws-opts: 
-      path: wss://kelas.ruangguru.com/howdy
-      headers: 
-        Host: sg2-trojan.bonds.id
-    udp: true
   - name: SG OVH
     server: 104.18.2.2
     port: 443
@@ -63,4 +24,17 @@ proxies:
       path: wss://kelas.ruangguru.com/howdy
       headers: 
         Host: sg-atha.bonds.id
+    udp: true
+  - name: SG why
+    server: kelas.ruangguru.com
+    port: 443
+    type: trojan
+    password: whyvpn-msecure
+    skip-cert-verify: true
+    sni: kelas.ruangguru.com
+    network: ws
+    ws-opts: 
+      path: wss://kelas.ruangguru.com/trojan-go
+      headers: 
+        Host: do3.kitu.xyz
     udp: true
