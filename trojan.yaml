@@ -1,6 +1,6 @@
 proxies:
   - name: SG OVH
-    server: 104.18.2.2
+    server: sgovh-trojan.bonds.id
     port: 443
     type: trojan
     password: 3df6d080-6f2e-11ed-9fca-1239d0255272
@@ -8,33 +8,33 @@ proxies:
     sni: kelas.ruangguru.com
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/howdy
+      path: /howdy
       headers: 
-        Host: sgovh-trojan.bonds.id
+        Host: ruangguru.com
     udp: true
   - name: SG dualstck
-    server: kelas.ruangguru.com
+    server: sg-atha.bonds.id
     port: 443
     type: trojan
     password: 181b4ce0-7278-11ed-9f71-1239d0255272
     skip-cert-verify: true
-    sni: kelas.ruangguru.com
+    sni: sg-atha.bonds.id
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/howdy
+      path: /howdy
       headers: 
-        Host: sg-atha.bonds.id
+        Host: ruangguru.com
     udp: true
   - name: SG why
-    server: kelas.ruangguru.com
+    server: do3.kitu.xyz
     port: 443
     type: trojan
     password: whyvpn-msecure
     skip-cert-verify: true
-    sni: kelas.ruangguru.com
+    sni: do3.kitu.xyz
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/trojan-go
+      path: /trojan-go
       headers: 
-        Host: do3.kitu.xyz
+        Host: ruangguru.com
     udp: true
