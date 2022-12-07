@@ -1,14 +1,14 @@
 proxies:
   - name: id alibababa
-    server: kelas.ruangguru.com
+    server: id.degidevops.eu.org
     port: 443
     type: trojan
     password: degidevops
     skip-cert-verify: true
-    sni: kelas.ruangguru.com
+    sni: id.degidevops.eu.org
     network: ws
     ws-opts: 
-      path: wss://kelas.ruangguru.com/trojan
+      path: /trojanwss
       headers: 
-        Host: id.degidevops.eu.org
+        Host: ruangguru.com
     udp: true
