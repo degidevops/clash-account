@@ -14,3 +14,63 @@ proxies:
       headers:
         Host: id.degidevops.eu.org
     udp: true
+  - name: "@tnd99_ot_id_1_xa"
+    server: 172.67.199.34
+    port: 80
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: idx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-tnd99
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
+  - name: "@tnd99_ot_id_2_xa"
+    server: 172.67.199.34
+    port: 80
+    type: vless
+    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: idx-1.openv2ray.com
+    network: ws
+    ws-opts:
+      path: /u/opentunnel.net-1206
+      headers:
+        Host: idx-1.openv2ray.com
+    udp: true
+  - name: "@tnd99_js_id1_xa"
+    server: 172.67.199.34
+    port: 80
+    type: vless
+    uuid: 6a49c06b-a82e-48aa-b99a-776cb48cab9c
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id1vless.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /jagoanssh
+      headers:
+        Host: id1vless.ipservers.xyz
+    udp: true
+  - name: "@tnd99_js_id2_xa"
+    server: 172.67.199.34
+    port: 80
+    type: vless
+    uuid: 6f52611f-44f2-4486-93a4-cee0cba83f96
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: id2vless.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: /jagoanssh
+      headers:
+        Host: id2vless.ipservers.xyz
+    udp: true
