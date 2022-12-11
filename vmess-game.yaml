@@ -1,17 +1,49 @@
 proxies:
-  - name: G ACCOUNT
-    server: gw.ruangguru.co
+  - name: G id-herza.v2-ray.com WSS
+    server: 104.18.2.2
     port: 443
     type: vmess
-    uuid: f66e68e0-c46d-4488-a7a0-68b8bce2420
+    uuid: 0891a040-78e7-11ed-b435-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: gw.ruangguru.co
+    servername: kelas.ruangguru.com
     network: ws
     ws-opts:
-      path: wss://gw.ruangguru.com/howd
+      path: GET-:wss://kelas.ruangguru.com/fastssh/
       headers:
-        Host: v2ray2.udpgw.co
-    #udp: true
+        Host: id-herza.v2-ray.com
+    udp: true
+  - name: G id-herza.v2-ray.com WSS 2
+    server: 104.18.2.2
+    port: 443
+    type: vmess
+    uuid: be486e50-78e6-11ed-b637-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: GET-:wss://kelas.ruangguru.com/fastssh/
+      headers:
+        Host: id-herza.v2-ray.com
+    udp: true
+  - name: G id-herza.v2-ray.com WSS 3
+    server: 104.18.2.2
+    port: 443
+    type: vmess
+    uuid: 54581690-78e6-11ed-b939-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kelas.ruangguru.com
+    network: ws
+    ws-opts:
+      path: GET-:wss://kelas.ruangguru.com/fastssh/
+      headers:
+        Host: id-herza.v2-ray.com
+    udp: true
