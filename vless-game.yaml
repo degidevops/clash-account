@@ -30,7 +30,7 @@ proxies:
         Host: test.dharak.id
     udp: true
   - name: G private
-    server: 172.67.199.34
+    server: 104.18.20.226
     port: 80
     type: vless
     uuid: 2ab2eb0d-5aed-4eef-bcfe-18b81b3f7cd9
@@ -45,7 +45,7 @@ proxies:
         Host: id.degidevops.eu.org
     udp: true
   - name: "@tnd99_ot_id_1_xa"
-    server: 172.67.199.34
+    server: 104.18.20.226
     port: 80
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -60,7 +60,7 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
   - name: "@tnd99_ot_id_2_xa"
-    server: 172.67.199.34
+    server: 104.18.20.226
     port: 80
     type: vless
     uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
@@ -75,7 +75,7 @@ proxies:
         Host: idx-1.openv2ray.com
     udp: true
   - name: "@tnd99_js_id1_xa"
-    server: 172.67.199.34
+    server: 104.18.20.226
     port: 80
     type: vless
     uuid: 6a49c06b-a82e-48aa-b99a-776cb48cab9c
@@ -90,7 +90,7 @@ proxies:
         Host: id1vless.ipservers.xyz
     udp: true
   - name: "@tnd99_js_id2_xa"
-    server: 172.67.199.34
+    server: 104.18.20.226
     port: 80
     type: vless
     uuid: 6f52611f-44f2-4486-93a4-cee0cba83f96
