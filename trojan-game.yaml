@@ -1,6 +1,6 @@
 proxies:
   - name: id alibababa
-    server: id.degidevops.eu.org
+    server: 104.18.20.226
     port: 443
     type: trojan
     password: degidevops
@@ -10,5 +10,31 @@ proxies:
     ws-opts: 
       path: /trojanwss
       headers: 
-        Host: ruangguru.com
+        Host: id.degidevops.eu.org
+    udp: true
+  - name: hezra howdy
+    server: 104.18.20.226
+    port: 443
+    type: trojan
+    password: 3920da40-82ea-11ed-b93f-1239d0255272
+    skip-cert-verify: true
+    sni: idtj-herza.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: idtj-herza.bonds.id
+    udp: true
+  - name: ikd howdy
+    server: 104.18.20.226
+    port: 443
+    type: trojan
+    password: 58100190-82ea-11ed-8da3-1239d0255272
+    skip-cert-verify: true
+    sni: idtj-ikd.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: idtj-ikd.bonds.id
     udp: true
