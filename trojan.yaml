@@ -3,12 +3,12 @@ proxies:
     server: 104.18.20.226
     port: 443
     type: trojan
-    password: 1d3cf6bb-0fe7-4a2c-9e9d-1e0b225fbc93
+    password: 006d2c70-8410-11ed-ba56-1239d0255272
     skip-cert-verify: true
-    sni: v2ray3.udpgw.com
+    sni: trojan3.udpgw.com
     network: ws
     ws-opts: 
-      path: /worryfree
+      path: /howdy
       headers: 
-        Host: v2ray3.udpgw.com
+        Host: trojan3.udpgw.com
     udp: true
