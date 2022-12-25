@@ -5,12 +5,12 @@ proxies:
     type: trojan
     password: degidevops
     skip-cert-verify: true
-    sni: id.degidevops.eu.org
+    sni: v2ray3.udpgw.com
     network: ws
     ws-opts: 
-      path: /trojanwss
+      path: /worryfree
       headers: 
-        Host: id.degidevops.eu.org
+        Host: v2ray3.udpgw.com
     udp: true
   - name: hezra howdy
     server: 104.18.20.226
