@@ -1,11 +1,11 @@
 proxies:
   - name: vless private
     server: 104.18.20.226
-    port: 80
+    port: 443
     type: vless
     uuid: 2ab2eb0d-5aed-4eef-bcfe-18b81b3f7cd9
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     servername: id.degidevops.eu.org
     network: ws
@@ -13,19 +13,4 @@ proxies:
       path: /
       headers:
         Host: id.degidevops.eu.org
-    udp: true
-  - name: opentunnel.net-msecure
-    server: 104.18.20.226
-    port: 80
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: idx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-msecure
-      headers:
-        Host: idx-1.openv2ray.com
     udp: true
