@@ -1,16 +1,1 @@
 proxies:
-  - name: "@tnd99_ot_sg_1_xa"
-    server: 104.18.20.22
-    port: 80
-    type: vless
-    uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    servername: sgx-1.openv2ray.com
-    network: ws
-    ws-opts:
-      path: /u/opentunnel.net-tnd99
-      headers:
-        Host: sgx-1.openv2ray.com
-    udp: true
