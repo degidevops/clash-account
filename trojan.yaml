@@ -10,7 +10,7 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: trojan3.udpgw.com
+        Host: st2.zoom.us
     udp: true
   - name: howdy ojan week
     server: trojan1.udpgw.com
@@ -23,7 +23,7 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: trojan1.udpgw.com
+        Host: st2.zoom.us
     udp: true
   - name: sg dual ojan
     server: sg-atha.bonds.id
@@ -36,7 +36,7 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: sg-atha.bonds.id
+        Host: st2.zoom.us
     udp: true
   - name: sg he ojan
     server: sg3-trojan.bonds.id
@@ -49,7 +49,7 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: sg3-trojan.bonds.id
+        Host: st2.zoom.us
     udp: true
   - name: he 1 ojan
     server: sg1-trojan.bonds.id
@@ -62,5 +62,5 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: sg1-trojan.bonds.id
+        Host: st2.zoom.us
     udp: true
