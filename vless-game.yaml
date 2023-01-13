@@ -7,7 +7,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: zoom.us
+    servername: st2.zoom.us
     network: ws
     ws-opts:
       path: /vlesswss
