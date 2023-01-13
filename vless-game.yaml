@@ -12,5 +12,5 @@ proxies:
     ws-opts:
       path: /vlesswss
       headers:
-        Host: id.degidevops.eu.org
+        Host: st2.zoom.us
     udp: true
