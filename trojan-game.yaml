@@ -10,7 +10,7 @@ proxies:
     ws-opts: 
       path: /trojantes
       headers: 
-        Host: id.degidevops.eu.org
+        Host: st2.zoom.us
     udp: true
   - name: hezra howdy
     server: idtj-herza.bonds.id
@@ -23,7 +23,7 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: idtj-herza.bonds.id
+        Host: st2.zoom.us
     udp: true
   - name: ikd howdy
     server: idtj-ikd.bonds.id
@@ -36,5 +36,5 @@ proxies:
     ws-opts:
       path: /howdy
       headers:
-        Host: idtj-ikd.bonds.id
+        Host: st2.zoom.us
     udp: true
