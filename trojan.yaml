@@ -1,11 +1,11 @@
 proxies:
   - name: sg ojan
-    server: 104.18.20.226
+    server: trojan3.udpgw.com
     port: 443
     type: trojan
     password: 006d2c70-8410-11ed-ba56-1239d0255272
     skip-cert-verify: true
-    sni: trojan3.udpgw.com
+    sni: zoom.us
     network: ws
     ws-opts:
       path: /howdy
@@ -13,12 +13,12 @@ proxies:
         Host: trojan3.udpgw.com
     udp: true
   - name: howdy ojan week
-    server: 104.18.20.226
+    server: trojan1.udpgw.com
     port: 443
     type: trojan
     password: da58fd50-8ebe-11ed-9f1c-1239d0255272
     skip-cert-verify: true
-    sni: trojan1.udpgw.com
+    sni: zoom.us
     network: ws
     ws-opts:
       path: /howdy
@@ -26,12 +26,12 @@ proxies:
         Host: trojan1.udpgw.com
     udp: true
   - name: sg dual ojan
-    server: 104.18.20.226
+    server: sg-atha.bonds.id
     port: 443
     type: trojan
     password: 67318b00-91f0-11ed-b344-1239d0255272
     skip-cert-verify: true
-    sni: sg-atha.bonds.id
+    sni: zoom.us
     network: ws
     ws-opts:
       path: /howdy
@@ -39,12 +39,12 @@ proxies:
         Host: sg-atha.bonds.id
     udp: true
   - name: sg he ojan
-    server: 104.18.20.226
+    server: sg3-trojan.bonds.id
     port: 443
     type: trojan
     password: 9cbed280-91f0-11ed-bd65-1239d0255272
     skip-cert-verify: true
-    sni: sg3-trojan.bonds.id
+    sni: zoom.us
     network: ws
     ws-opts:
       path: /howdy
@@ -52,12 +52,12 @@ proxies:
         Host: sg3-trojan.bonds.id
     udp: true
   - name: he 1 ojan
-    server: 104.18.20.226
+    server: sg1-trojan.bonds.id
     port: 443
     type: trojan
     password: 6cc7a1a0-91f1-11ed-b24d-1239d0255272
     skip-cert-verify: true
-    sni: sg1-trojan.bonds.id
+    sni: zoom.us
     network: ws
     ws-opts:
       path: /howdy
