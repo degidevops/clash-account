@@ -5,7 +5,7 @@ proxies:
     type: trojan
     password: degidevops
     skip-cert-verify: true
-    sni: zoom.us
+    sni: st2.zoom.us
     network: ws
     ws-opts: 
       path: /trojantes
@@ -18,7 +18,7 @@ proxies:
     type: trojan
     password: 3920da40-82ea-11ed-b93f-1239d0255272
     skip-cert-verify: true
-    sni: zoom.us
+    sni: st2.zoom.us
     network: ws
     ws-opts:
       path: /howdy
@@ -31,7 +31,7 @@ proxies:
     type: trojan
     password: 58100190-82ea-11ed-8da3-1239d0255272
     skip-cert-verify: true
-    sni: zoom.us
+    sni: st2.zoom.us
     network: ws
     ws-opts:
       path: /howdy
