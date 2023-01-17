@@ -1,6 +1,6 @@
 proxies:
   - name: vless private
-    server: id.degidevops.eu.org
+    server: 149.129.242.60
     port: 443
     type: vless
     uuid: 2ab2eb0d-5aed-4eef-bcfe-18b81b3f7cd9
