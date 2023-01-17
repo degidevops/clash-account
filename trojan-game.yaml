@@ -1,40 +1,40 @@
 proxies:
   - name: id alibababa
-    server: id.degidevops.eu.org
+    server: 141.193.213.20
     port: 443
     type: trojan
     password: degidevops
     skip-cert-verify: true
-    sni: st2.zoom.us
+    sni: id.degidevops.eu.org
     network: ws
     ws-opts: 
       path: /trojantes
       headers: 
-        Host: st2.zoom.us
+        Host: id.degidevops.eu.org
     udp: true
   - name: hezra howdy
-    server: idtj-herza.bonds.id
+    server: 141.193.213.20
     port: 443
     type: trojan
     password: 3920da40-82ea-11ed-b93f-1239d0255272
     skip-cert-verify: true
-    sni: st2.zoom.us
+    sni: idtj-herza.bonds.id
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: st2.zoom.us
+        Host: idtj-herza.bonds.id
     udp: true
   - name: ikd howdy
-    server: idtj-ikd.bonds.id
+    server: 141.193.213.20
     port: 443
     type: trojan
     password: 58100190-82ea-11ed-8da3-1239d0255272
     skip-cert-verify: true
-    sni: st2.zoom.us
+    sni: idtj-ikd.bonds.id
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: st2.zoom.us
+        Host: idtj-ikd.bonds.id
     udp: true
