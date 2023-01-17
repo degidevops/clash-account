@@ -1,16 +1,16 @@
 proxies:
   - name: vless private
-    server: id.degidevops.eu.org
+    server: 141.193.213.20
     port: 443
     type: vless
     uuid: 2ab2eb0d-5aed-4eef-bcfe-18b81b3f7cd9
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: st2.zoom.us
+    servername: id.degidevops.eu.org
     network: ws
     ws-opts:
       path: /vlesswss
       headers:
-        Host: st2.zoom.us
+        Host: id.degidevops.eu.org
     udp: true
