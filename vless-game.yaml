@@ -7,7 +7,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: id.degidevops.eu.org
+    servername: zoom.us
     network: ws
     ws-opts:
       path: /vlesswss
