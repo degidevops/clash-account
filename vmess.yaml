@@ -1,81 +1,17 @@
 proxies:
-  - name: v2ray1.udpgw.com
-    server: kelas.ruangguru.com
+  - name: sg-lb.vhax.net
+    server: sg-lb.vhax.net
     port: 443
     type: vmess
-    uuid: d4d8fb83-71d9-49a4-ae1e-7c49e9a069c4
+    uuid: 6fea1649-425b-4092-bf53-29792152c925
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: kelas.ruangguru.com
+    servername: support.zoom.us
     network: ws
     ws-opts:
-      path: wss://kelas.ruangguru.com/howdy
+      path: /sshkit/msecuresglb/63ceebb73a598/
       headers:
-        Host: v2ray1.udpgw.com
-    #udp: true
-  - name: v2ray1.udpgw.com byu
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: d4d8fb83-71d9-49a4-ae1e-7c49e9a069c4
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/howdy
-      headers:
-        Host: v2ray1.udpgw.com
-    #udp: true
-  - name: why sg 11
-    server: kelas.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: dd9a0a3f-14b5-4ee1-ac38-93eb937e6087
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts:
-      path: wss://kelas.ruangguru.com/vmess/
-      headers:
-        Host: do1.kitu.xyz
-    #udp: true
-  - name: why sg byu 11
-    server: space.byu.id
-    port: 443
-    type: vmess
-    uuid: dd9a0a3f-14b5-4ee1-ac38-93eb937e6087
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: space.byu.id
-    network: ws
-    ws-opts:
-      path: wss://space.byu.id/vmess/
-      headers:
-        Host: do1.kitu.xyz
-    #udp: true
-  - name: sg2.31vpn.com
-    server: kelas.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: fbf78c1f-6f42-45e0-a1a9-67de703b90f8
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kelas.ruangguru.com
-    network: ws
-    ws-opts: 
-      path: wss://kelas.ruangguru.com/fastssh/msecure/63400e73bff39/
-      headers: 
-        Host: kelas.ruangguru.com
+        Host: sg-lb.vhax.net
     udp: true
