@@ -5,12 +5,12 @@ proxies:
     type: trojan
     password: 67318b00-91f0-11ed-b344-1239d0255272
     skip-cert-verify: true
-    sni: zoom.us
+    sni: maxcdn.bootstrapcdn.com
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: zoom.us
+        Host: maxcdn.bootstrapcdn.com
     udp: true
   - name: sg he ojan
     server: 103.253.24.216
@@ -18,12 +18,12 @@ proxies:
     type: trojan
     password: 9cbed280-91f0-11ed-bd65-1239d0255272
     skip-cert-verify: true
-    sni: zoom.us
+    sni: maxcdn.bootstrapcdn.com
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: zoom.us
+        Host: maxcdn.bootstrapcdn.com
     udp: true
   - name: he 1 ojan
     server: 103.253.24.212
@@ -31,10 +31,10 @@ proxies:
     type: trojan
     password: 6cc7a1a0-91f1-11ed-b24d-1239d0255272
     skip-cert-verify: true
-    sni: zoom.us
+    sni: maxcdn.bootstrapcdn.com
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: sg1-trojan.bonds.id
+        Host: maxcdn.bootstrapcdn.com
     udp: true
