@@ -8,7 +8,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: support.zoom.us
+    servername: maxcdn.bootstrapcdn.com
     network: ws
     ws-opts:
       path: /sshkit/msecuresglb/63ceebb73a598/
