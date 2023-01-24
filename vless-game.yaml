@@ -7,7 +7,7 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: zoom.us
+    servername: maxcdn.bootstrapcdn.com
     network: ws
     ws-opts:
       path: /vlesswss
