@@ -1,30 +1,4 @@
 proxies:
-  - name: sg ojan
-    server: 206.189.87.17
-    port: 443
-    type: trojan
-    password: 006d2c70-8410-11ed-ba56-1239d0255272
-    skip-cert-verify: true
-    sni: zoom.us
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: zoom.us
-    udp: true
-  - name: howdy ojan week
-    server: 188.166.218.22
-    port: 443
-    type: trojan
-    password: da58fd50-8ebe-11ed-9f1c-1239d0255272
-    skip-cert-verify: true
-    sni: zoom.us
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: zoom.us
-    udp: true
   - name: sg dual ojan
     server: 194.233.151.107
     port: 443
@@ -63,17 +37,4 @@ proxies:
       path: /howdy
       headers:
         Host: sg1-trojan.bonds.id
-    udp: true
-  - name: ovh ojan
-    server: 103.253.24.212
-    port: 443
-    type: trojan
-    password: 1b855640-9baa-11ed-8c26-1239d0255272
-    skip-cert-verify: true
-    sni: zoom.us
-    network: ws
-    ws-opts:
-      path: /howdy
-      headers:
-        Host: zoom.us
     udp: true
