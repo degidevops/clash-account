@@ -12,11 +12,24 @@ proxies:
       headers: 
         Host: zoom.us
     udp: true
-  - name: hezra howdy
+  - name: "idtj-herza.bonds.id # 1"
     server: 103.173.75.165
     port: 443
     type: trojan
-    password: 3920da40-82ea-11ed-b93f-1239d0255272
+    password: 7633a170-9bb9-11ed-bc2f-1239d0255272
+    skip-cert-verify: true
+    sni: zoom.us
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: zoom.us
+    udp: true
+  - name: "idtj-ikd.bonds.id # 1"
+    server: 103.180.125.252
+    port: 443
+    type: trojan
+    password: dbc56130-9bb9-11ed-879b-1239d0255272
     skip-cert-verify: true
     sni: zoom.us
     network: ws
