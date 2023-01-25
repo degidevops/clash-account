@@ -1,40 +1,40 @@
 proxies:
   - name: sg dual ojan
-    server: 194.233.151.107
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: 67318b00-91f0-11ed-b344-1239d0255272
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: maxcdn.bootstrapcdn.com
+        Host: sg-atha.bonds.id
     udp: true
   - name: sg he ojan
-    server: 103.253.24.216
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: 9cbed280-91f0-11ed-bd65-1239d0255272
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: maxcdn.bootstrapcdn.com
+        Host: sg3-trojan.bonds.id
     udp: true
   - name: he 1 ojan
-    server: 103.253.24.212
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: 6cc7a1a0-91f1-11ed-b24d-1239d0255272
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: maxcdn.bootstrapcdn.com
+        Host: sg1-trojan.bonds.id
     udp: true
