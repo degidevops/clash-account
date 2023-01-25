@@ -5,7 +5,7 @@ proxies:
     type: trojan
     password: 67318b00-91f0-11ed-b344-1239d0255272
     skip-cert-verify: true
-    sni: support.zoom.us
+    sni: sg-atha.bonds.id
     network: ws
     ws-opts:
       path: /howdy
@@ -18,7 +18,7 @@ proxies:
     type: trojan
     password: 9cbed280-91f0-11ed-bd65-1239d0255272
     skip-cert-verify: true
-    sni: support.zoom.us
+    sni: sg3-trojan.bonds.id
     network: ws
     ws-opts:
       path: /howdy
@@ -31,7 +31,7 @@ proxies:
     type: trojan
     password: 6cc7a1a0-91f1-11ed-b24d-1239d0255272
     skip-cert-verify: true
-    sni: support.zoom.us
+    sni: sg1-trojan.bonds.id
     network: ws
     ws-opts:
       path: /howdy
