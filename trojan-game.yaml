@@ -18,7 +18,7 @@ proxies:
     type: trojan
     password: 7633a170-9bb9-11ed-bc2f-1239d0255272
     skip-cert-verify: true
-    sni: support.zoom.us
+    sni: idtj-herza.bonds.id
     network: ws
     ws-opts:
       path: /howdy
@@ -31,7 +31,7 @@ proxies:
     type: trojan
     password: dbc56130-9bb9-11ed-879b-1239d0255272
     skip-cert-verify: true
-    sni: support.zoom.us
+    sni: idtj-ikd.bonds.id
     network: ws
     ws-opts:
       path: /howdy
@@ -44,7 +44,7 @@ proxies:
     type: trojan
     password: 58100190-82ea-11ed-8da3-1239d0255272
     skip-cert-verify: true
-    sni: support.zoom.us
+    sni: idtj-herza.bonds.id
     network: ws
     ws-opts:
       path: /howdy
