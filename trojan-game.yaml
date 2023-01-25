@@ -1,53 +1,53 @@
 proxies:
   - name: id alibababa
-    server: 149.129.242.60
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: degidevops
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts: 
       path: /trojantes
       headers: 
-        Host: maxcdn.bootstrapcdn.com
+        Host: id.degidevops.eu.org
     udp: true
   - name: "idtj-herza.bonds.id # 1"
-    server: 103.173.75.165
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: 7633a170-9bb9-11ed-bc2f-1239d0255272
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: maxcdn.bootstrapcdn.com
+        Host: idtj-herza.bonds.id
     udp: true
   - name: "idtj-ikd.bonds.id # 1"
-    server: 103.180.125.252
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: dbc56130-9bb9-11ed-879b-1239d0255272
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: maxcdn.bootstrapcdn.com
+        Host: idtj-ikd.bonds.id
     udp: true
   - name: ikd howdy
-    server: 103.180.125.252
+    server: 104.16.51.111
     port: 443
     type: trojan
     password: 58100190-82ea-11ed-8da3-1239d0255272
     skip-cert-verify: true
-    sni: maxcdn.bootstrapcdn.com
+    sni: support.zoom.us
     network: ws
     ws-opts:
       path: /howdy
       headers:
-        Host: maxcdn.bootstrapcdn.com
+        Host: idtj-herza.bonds.id
     udp: true
