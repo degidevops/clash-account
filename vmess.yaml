@@ -1,17 +1,17 @@
 proxies:
-  - name: sg-lb.vhax.net
-    server: sg-lb.vhax.net
-    port: 443
+  - name: Vmess Singapore HE-1 2023-02-13
+    server: 103.253.26.220
+    port: 2086
     type: vmess
-    uuid: 6fea1649-425b-4092-bf53-29792152c925
+    uuid: f52e0860-a5ec-11ed-b233-205c6d5f5d78
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
-    servername: maxcdn.bootstrapcdn.com
+    servername: instagram.com
     network: ws
     ws-opts:
-      path: /sshkit/msecuresglb/63ceebb73a598/
+      path: http://tsel.me/worryfree
       headers:
-        Host: sg-lb.vhax.net
+        Host: instagram.com
     udp: true
